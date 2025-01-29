@@ -28,7 +28,7 @@ export const TeamList = observer(() => {
   const containerRef = React.useRef<HTMLDivElement | null>(null);
   const currentUser = React.useContext(UserContext);
   const { teamsStore, workspaceStore } = useContextStore();
-  // If the team exists in the route path
+  // If the team exists in the route pat
   const team = useCurrentTeam();
   const teamAccessList =
     workspaceStore.getUserData(currentUser.id)?.teamIds ?? [];
