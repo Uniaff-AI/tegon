@@ -61,9 +61,9 @@ export function SecurityForm() {
             name="oldPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Old password</FormLabel>
+                <FormLabel>Старый пароль</FormLabel>
                 <FormControl>
-                  <Input placeholder="old password" {...field} />
+                  <Input placeholder="Старый пароль" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -75,9 +75,9 @@ export function SecurityForm() {
             name="newPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>New password</FormLabel>
+                <FormLabel>Новый пароль</FormLabel>
                 <FormControl>
-                  <Input placeholder="new password" {...field} />
+                  <Input placeholder="Новый пароль" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -90,7 +90,7 @@ export function SecurityForm() {
             variant="secondary"
             isLoading={form.formState.isSubmitting}
           >
-            Update
+            Обновить
           </Button>
         </form>
       </Form>

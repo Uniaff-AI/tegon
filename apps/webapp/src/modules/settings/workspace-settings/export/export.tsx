@@ -9,8 +9,8 @@ export function Export() {
 
   return (
     <SettingSection
-      title="Export"
-      description="Export your issue data in CSV format."
+      title="Экспортировать"
+      description="Экспортируйте данные ваших задач в формате CSV."
     >
       <Button
         variant="secondary"
@@ -21,7 +21,7 @@ export function Export() {
           );
         }}
       >
-        Export CSV
+        Экспорт CSV
       </Button>
     </SettingSection>
   );

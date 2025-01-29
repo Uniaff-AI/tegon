@@ -4,7 +4,7 @@ import { SecurityForm } from './security-form';
 
 export function Security() {
   return (
-    <SettingSection title="Security" description="Change your password">
+    <SettingSection title="Безопасность" description="Смените свой пароль">
       <SecurityForm />
     </SettingSection>
   );

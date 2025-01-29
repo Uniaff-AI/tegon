@@ -65,9 +65,9 @@ export function OnboardingForm() {
           name="fullname"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full name</FormLabel>
+              <FormLabel>Полное имя</FormLabel>
               <FormControl>
-                <Input placeholder="Full name" className="h-9" {...field} />
+                <Input placeholder="Полное имя" className="h-9" {...field} />
               </FormControl>
 
               <FormMessage />

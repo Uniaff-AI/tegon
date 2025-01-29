@@ -25,20 +25,20 @@ export function Actions() {
 
   return (
     <div>
-      <h2 className="text-lg mb-4"> New action</h2>
+      <h2 className="text-lg mb-4"> Новое действие</h2>
 
       <div className="flex">
         <Card className="cursor-pointer">
           <CardHeader>
             <AddLine size={24} />
-            <CardTitle>Create action</CardTitle>
-            <CardDescription>Create from scratch</CardDescription>
+            <CardTitle>Создать действие</CardTitle>
+            <CardDescription>Создать с нуля</CardDescription>
           </CardHeader>
         </Card>
       </div>
 
       <div className="mt-6">
-        <h2 className="text-md mb-4"> Installed actions</h2>
+        <h2 className="text-md mb-4"> Установленные действия</h2>
 
         <div className="grid grid-cols-4 gap-4">
           {actions.map((action: ActionSource) => (

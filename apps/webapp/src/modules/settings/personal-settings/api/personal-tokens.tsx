@@ -28,7 +28,7 @@ export function PersonalTokens() {
                 setNewTokenCreation(true);
               }}
             >
-              New token
+              Новый Токен
             </Button>
           </div>
         </div>

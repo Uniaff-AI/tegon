@@ -30,8 +30,7 @@ export const DeleteTeamButton = observer(() => {
     if (issues.length > 0) {
       return (
         <div className="flex items-center">
-          Cannot delete team - please remove all issues ({issues.length}) before
-          deletion.
+            Невозможно удалить команду — пожалуйста, удалите все задачи ({issues.length}) перед удалением.
         </div>
       );
     }
@@ -39,15 +38,14 @@ export const DeleteTeamButton = observer(() => {
     return (
       <div className="flex flex-col gap-3">
         <div className="text-sm">
-          Are you sure you want to delete this team? This action cannot be
-          undone.
+            Вы уверены, что хотите удалить эту команду? Это действие не может быть отменено.
         </div>
         <Button
           variant="destructive"
           onClick={deleteTeam}
           isLoading={isLoading}
         >
-          Yes, delete team
+            Да, удалить команду
         </Button>
       </div>
     );
@@ -62,7 +60,7 @@ export const DeleteTeamButton = observer(() => {
           onClick={() => setOpen(true)}
           isLoading={isLoading}
         >
-          Delete this team
+            Удалить эту команду
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-80">{getContentForPopover()}</PopoverContent>

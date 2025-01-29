@@ -31,8 +31,8 @@ export const Overview = observer(() => {
   const { mutate: updateWorkspace } = useUpdateWorkspaceMutation({
     onSuccess: () => {
       toast({
-        title: 'Saved!',
-        description: 'Your workspace information has been updated',
+        title: 'Сохранено!',
+        description: 'Информация о вашей рабочей области была обновлена',
       });
     },
   });
@@ -57,8 +57,8 @@ export const Overview = observer(() => {
       </div>
 
       <SettingSection
-        title="Profile"
-        description="Manage all the settings for your organization"
+        title="Профиль"
+        description="Управляйте всеми настройками вашей организации"
       >
         <div className="max-w-[500px]">
           <Form {...form}>
@@ -68,7 +68,7 @@ export const Overview = observer(() => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Workspace name</FormLabel>
+                    <FormLabel>Название рабочей области</FormLabel>
                     <FormControl>
                       <Input placeholder="Tesla" {...field} />
                     </FormControl>
@@ -83,7 +83,7 @@ export const Overview = observer(() => {
                 variant="secondary"
                 isLoading={form.formState.isSubmitting}
               >
-                Update
+                Обновить
               </Button>
             </form>
           </Form>
@@ -94,18 +94,16 @@ export const Overview = observer(() => {
       <Preferences />
       <Separator className="my-4" />
 
-      <SettingSection title="Danger zone" description="proceed with caution">
+      <SettingSection title="Опасная зона" description="Продолжайте с осторожностью">
         <div className="flex flex-col">
-          <h3 className="text-lg"> Delete workspace </h3>
+          <h3 className="text-lg"> Удалить рабочую область </h3>
 
           <p className="text-muted-foreground">
-            If you want to permanently delete this workspace and all of its
-            data, including but not limited to users, issues, and comments, you
-            can do so below.
+              Если вы хотите безвозвратно удалить эту рабочую область и все её данные, включая (но не ограничиваясь) пользователей, задачи и комментарии, вы можете сделать это ниже.
           </p>
 
           <Button className="w-fit mt-2" variant="destructive">
-            Delete this workspace
+              Удалить эту рабочую область
           </Button>
         </div>
       </SettingSection>

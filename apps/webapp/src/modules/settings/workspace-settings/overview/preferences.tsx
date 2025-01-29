@@ -27,15 +27,13 @@ export const Preferences = observer(() => {
 
   return (
     <SettingSection
-      title="Workspace preferences"
-      description="Manage your workspace preferences"
+      title="Настройки рабочей области"
+      description="Управляйте настройками вашей рабочей области"
     >
       <div className="flex flex-col">
-        <h3 className="text-lg"> Priority preference </h3>
+        <h3 className="text-lg"> Приоритетное предпочтение </h3>
         <p className="text-muted-foreground">
-          With your preferred priority settings, you can automatically assign
-          issue priorities such as High, Medium, Low, or Urgent based on your
-          defined rules.
+          С помощью выбранных вами настроек приоритетов вы можете автоматически назначать приоритеты для задач, такие как высокий, средний, низкий или срочный, на основе определённых вами правил.
         </p>
 
         <div className="flex gap-1 max-w-[500px] mt-2">
@@ -54,13 +52,13 @@ export const Preferences = observer(() => {
                 key={PriorityType.DescriptivePriority}
                 value={PriorityType.DescriptivePriority}
               >
-                Description (Urgent, High, Medium, Low)
+                Описание (Срочный, Высокий, Средний, Низкий)
               </SelectItem>
               <SelectItem
                 key={PriorityType.ShorthandPriority}
                 value={PriorityType.ShorthandPriority}
               >
-                Shorthand (P0, P1, P2)
+                Краткое обозначение (P0, P1, P2)
               </SelectItem>
             </SelectContent>
           </Select>

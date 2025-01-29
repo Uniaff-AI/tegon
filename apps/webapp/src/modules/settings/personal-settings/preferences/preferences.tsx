@@ -15,10 +15,10 @@ export function Preferences() {
 
   return (
     <div className="flex flex-col gap-2">
-      <h2 className="text-xl"> Preferences </h2>
+      <h2 className="text-xl"> Настройки </h2>
       <SettingSection
-        title="Theme"
-        description="Choose a preferred theme for the app."
+        title="Тема"
+        description="Выберите предпочитаемую тему для приложения."
       >
         <Select
           value={theme}
@@ -31,8 +31,8 @@ export function Preferences() {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="light">Светлая</SelectItem>
+              <SelectItem value="dark">Темная</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

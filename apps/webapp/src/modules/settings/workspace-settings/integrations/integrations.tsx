@@ -67,8 +67,8 @@ export function Integrations() {
 
   return (
     <SettingSection
-      title="Integrations"
-      description="Manage your workspace integrations"
+      title="Интеграции"
+      description="Управляйте интеграциями вашей рабочей области"
     >
       <div className="flex flex-col gap-2">
         {integrations.map((integration) => (

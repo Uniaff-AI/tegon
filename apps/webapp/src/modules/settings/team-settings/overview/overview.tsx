@@ -42,8 +42,8 @@ export const Overview = observer(() => {
       replace(`/${workspaceSlug}/settings/teams/${data.identifier}/overview`);
 
       toast({
-        title: 'Team updated',
-        description: 'Team details updated successfully',
+        title: 'Команда обновлена',
+        description: 'Данные команды успешно обновлены',
       });
     },
   });
@@ -75,7 +75,7 @@ export const Overview = observer(() => {
 
   return (
     <div className="flex flex-col gap-3">
-      <SettingSection title="Team" description=" Manage your team settings">
+      <SettingSection title="Команда" description=" Управляйте настройками вашей команды">
         <div className="max-w-[250px]">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -84,9 +84,9 @@ export const Overview = observer(() => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Team name</FormLabel>
+                    <FormLabel>Название команды</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tesla" {...field} />
+                      <Input placeholder="Название" {...field} />
                     </FormControl>
 
                     <FormMessage />
@@ -99,9 +99,9 @@ export const Overview = observer(() => {
                 name="identifier"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Team identifier</FormLabel>
+                    <FormLabel>Идентификатор команды</FormLabel>
                     <FormControl>
-                      <Input placeholder="TES" {...field} />
+                      <Input placeholder="Идентификатор" {...field} />
                     </FormControl>
 
                     <FormMessage />
@@ -125,14 +125,12 @@ export const Overview = observer(() => {
       <Preferences />
       <Separator className="my-4" />
 
-      <SettingSection title="Danger zone" description="proceed with caution">
+      <SettingSection title="Опасная зона" description="Продолжайте с осторожностью">
         <div className="flex flex-col">
-          <h3 className="text-lg"> Delete team </h3>
+          <h3 className="text-lg"> Удалить команду </h3>
 
           <p className="text-muted-foreground">
-            If you want to permanently delete this team and all of its data,
-            including but not limited to users, issues, and comments, you can do
-            so below.
+            Если вы хотите безвозвратно удалить эту команду и все её данные, включая (но не ограничиваясь) пользователей, задачи и комментарии, вы можете сделать это ниже.
           </p>
 
           <DeleteTeamButton />

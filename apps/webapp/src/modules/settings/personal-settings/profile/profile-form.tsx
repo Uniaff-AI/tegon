@@ -34,8 +34,8 @@ export function ProfileForm() {
   const { mutate: updateUser } = useUpdateUserMutation({
     onSuccess: () => {
       toast({
-        title: 'Saved!',
-        description: 'Your user information has been updated',
+        title: 'Сохранено!',
+        description: 'Информация о вашем пользователе была обновлена',
       });
     },
   });
@@ -53,9 +53,9 @@ export function ProfileForm() {
             name="fullname"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full name</FormLabel>
+                <FormLabel>Полное имя</FormLabel>
                 <FormControl>
-                  <Input placeholder="Tesla" {...field} />
+                  <Input placeholder="Имя..." {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -67,9 +67,9 @@ export function ProfileForm() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Имя пользователя</FormLabel>
                 <FormControl>
-                  <Input placeholder="elonmusk" {...field} />
+                  <Input placeholder="Никнейм" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -82,7 +82,7 @@ export function ProfileForm() {
             variant="secondary"
             isLoading={form.formState.isSubmitting}
           >
-            Update
+            Обновить
           </Button>
         </form>
       </Form>

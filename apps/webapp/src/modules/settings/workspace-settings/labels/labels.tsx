@@ -23,10 +23,7 @@ export const Labels = observer(() => {
   return (
     <SettingSection
       title="Workspace labels"
-      description="  Use labels and label groups to help organize and filter issues in your
-          workspace. Labels created in this section are available for all teams
-          to use. To create labels or label groups that only apply to certain
-          teams, add them in the team-specific label settings."
+      description="  Используйте метки и группы меток, чтобы помогать организовывать и фильтровать задачи в вашей рабочей области. Метки, созданные в этом разделе, доступны для использования всеми командами. Чтобы создавать метки или группы меток, которые будут использоваться только определёнными командами, добавьте их в настройках меток, относящихся к конкретной команде."
     >
       <div className="flex flex-col">
         <div className="mb-4">
@@ -40,12 +37,12 @@ export const Labels = observer(() => {
                   setNewLabelCreation(true);
                 }}
               >
-                New label
+                Новая метка
               </Button>
             </div>
             <div className="flex">
               <Input
-                placeholder="Filter by name"
+                placeholder="Фильтр по имени"
                 onChange={(e) => setSearchValue(e.currentTarget.value)}
               />
             </div>

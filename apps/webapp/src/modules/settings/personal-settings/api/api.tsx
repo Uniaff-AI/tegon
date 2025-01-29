@@ -5,8 +5,8 @@ import { PersonalTokens } from './personal-tokens';
 export function API() {
   return (
     <SettingSection
-      title="Personal API Keys"
-      description="You can create personal tokens to deploy your actions on the platform"
+      title="Личные ключи API"
+      description="Вы можете создавать личные токены, чтобы развертывать свои действия на платформе"
     >
       <PersonalTokens />
     </SettingSection>

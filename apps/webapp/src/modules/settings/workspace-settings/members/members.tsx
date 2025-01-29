@@ -27,8 +27,8 @@ export const Members = observer(() => {
   const getUsers = (isSuspened: boolean = false) => {
     const nonSuspendedUsers = users.filter((user) =>
       isSuspened
-        ? workspaceStore.getUserData(user.id).status === 'SUSPENDED'
-        : workspaceStore.getUserData(user.id).status !== 'SUSPENDED',
+        ? workspaceStore.getUserData(user.id).status === 'ПРИОСТАНОВЛЕН'
+        : workspaceStore.getUserData(user.id).status !== 'ПРИОСТАНОВЛЕН',
     );
 
     if (searchValue) {
@@ -45,8 +45,8 @@ export const Members = observer(() => {
   return (
     <>
       <SettingSection
-        title="Members"
-        description=" Manage who has access to this workspace"
+        title="Участники"
+        description=" Управляйте тем, кто имеет доступ к этой рабочей области"
       >
         <div>
           {isLoading && <Loader />}
@@ -58,12 +58,12 @@ export const Members = observer(() => {
                   variant="secondary"
                   onClick={() => setNewMemberDialog(true)}
                 >
-                  Add member
+                  Добавить участника
                 </Button>
 
                 <div className="flex">
                   <Input
-                    placeholder="Filter by name"
+                    placeholder="Фильтр по имени"
                     onChange={(e) => setSearchValue(e.currentTarget.value)}
                   />
                 </div>
@@ -84,7 +84,7 @@ export const Members = observer(() => {
 
               {getUsers(true).length > 0 && (
                 <div className="mt-4">
-                  <h2 className="mb-1"> Suspended </h2>
+                  <h2 className="mb-1"> Приостановлен </h2>
 
                   {getUsers(true).map((userData: User, index) => (
                     <MemberItem

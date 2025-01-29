@@ -17,16 +17,15 @@ export const Preferences = observer(() => {
 
   return (
     <SettingSection
-      title="Team preferences"
-      description="Manage your team preferences"
+      title="Настройки команды"
+      description="Управляйте настройками вашей команды"
     >
       <div className="flex flex-col gap-4">
         <div className="flex flex-col">
-          <h3 className="text-lg"> Create by email </h3>
+          <h3 className="text-lg"> Создать по электронной почте </h3>
 
           <p className="text-muted-foreground">
-            With the unique email created for your team, you can send or forward
-            emails and we will automatically create issues in triage from them.
+            С помощью уникального адреса электронной почты, созданного для вашей команды, вы можете отправлять или пересылать письма, и мы автоматически будем создавать задачи в списке на рассмотрение из них
           </p>
 
           <div className="flex gap-1 max-w-[500px] mt-2">
@@ -36,7 +35,7 @@ export const Preferences = observer(() => {
               onClick={() => {
                 copy(teamEmail);
                 toast({
-                  description: 'Email is copied to clipboard',
+                  description: 'Адрес электронной почты скопирован в буфер обмена',
                 });
               }}
             >
