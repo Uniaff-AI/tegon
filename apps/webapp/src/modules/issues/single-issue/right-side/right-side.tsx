@@ -92,7 +92,7 @@ export const RightSide = observer(() => {
     <ScrollArea className="h-full">
       <div className="grow p-6 flex flex-col gap-4 pb-10">
         <div className="flex flex-col items-start">
-          <label className="text-xs">Status</label>
+          <label className="text-xs">Статус</label>
           <IssueStatusDropdown
             value={issue.stateId}
             onChange={statusChange}
@@ -102,7 +102,7 @@ export const RightSide = observer(() => {
         </div>
 
         <div className="flex flex-col items-start">
-          <label className="text-xs">Priority</label>
+          <label className="text-xs">Приоритет</label>
 
           <IssuePriorityDropdown
             value={issue.priority ?? 0}
@@ -112,7 +112,7 @@ export const RightSide = observer(() => {
         </div>
 
         <div className="flex flex-col items-start">
-          <label className="text-xs">Assignee</label>
+          <label className="text-xs">Автор</label>
 
           <IssueAssigneeDropdown
             value={issue.assigneeId}
@@ -125,7 +125,7 @@ export const RightSide = observer(() => {
         <IssueRelatedProperties />
 
         <div className={cn('flex flex-col items-start')}>
-          <div className="text-xs text-left">Labels</div>
+          <div className="text-xs text-left">Заголовки</div>
 
           <IssueLabelDropdown
             value={issue.labelIds}
@@ -135,7 +135,7 @@ export const RightSide = observer(() => {
           />
         </div>
         <div className={cn('flex flex-col items-start')}>
-          <div className="text-xs text-left">Due Date</div>
+          <div className="text-xs text-left">Дедлайн</div>
           <DueDate dueDate={issue.dueDate} dueDateChange={dueDateChange} />
         </div>
 
@@ -154,7 +154,7 @@ export const RightSide = observer(() => {
 
         {hasProjectsForTeam && (
           <div className={cn('flex flex-col items-start')}>
-            <div className="text-xs text-left">Project</div>
+            <div className="text-xs text-left">Проект</div>
 
             <ProjectDropdown
               value={issue.projectId}

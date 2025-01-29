@@ -15,7 +15,7 @@ export function Header() {
           <BreadcrumbLink className="flex items-center gap-2">
             <Inbox size={20} />
 
-            <span className="inline-block"> Inbox</span>
+            <span className="inline-block"> Входящие</span>
           </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>

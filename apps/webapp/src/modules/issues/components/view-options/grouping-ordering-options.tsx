@@ -36,13 +36,13 @@ export const GroupingOrderingOptions = observer(() => {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectLabel className="text-xs font-normal">Group by</SelectLabel>
-            <SelectItem value="status">Status</SelectItem>
+            <SelectLabel className="text-xs font-normal">Группировать по </SelectLabel>
+            <SelectItem value="status">Статусу</SelectItem>
             <SelectItem value="assignee">Assignee</SelectItem>
-            <SelectItem value="priority">Priority</SelectItem>
-            <SelectItem value="label">Label</SelectItem>
-            {!project && <SelectItem value="project">Project</SelectItem>}
-            {!team && <SelectItem value="team">Team</SelectItem>}
+            <SelectItem value="priority">Приоритетам</SelectItem>
+            <SelectItem value="label">Заголовкам</SelectItem>
+            {!project && <SelectItem value="project">Проектам</SelectItem>}
+            {!team && <SelectItem value="team">Командам</SelectItem>}
           </SelectGroup>
         </SelectContent>
       </Select>
@@ -60,13 +60,13 @@ export const GroupingOrderingOptions = observer(() => {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectLabel className="text-xs font-normal">Order by</SelectLabel>
+            <SelectLabel className="text-xs font-normal">Отсортировать по </SelectLabel>
 
-            <SelectItem value="status">Status</SelectItem>
+            <SelectItem value="status">Статусу</SelectItem>
             <SelectItem value="assignee">Assignee</SelectItem>
-            <SelectItem value="priority">Priority</SelectItem>
-            <SelectItem value="updated_at">Last updated</SelectItem>
-            <SelectItem value="created_at">Last created</SelectItem>
+            <SelectItem value="priority">Приоритету</SelectItem>
+            <SelectItem value="updated_at">Последние обновления</SelectItem>
+            <SelectItem value="created_at">Последние созданные</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>

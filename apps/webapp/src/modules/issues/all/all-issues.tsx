@@ -42,7 +42,7 @@ export const AllIssues = withApplicationStore(() => {
     <MainLayout
       header={
         <Header
-          title="All issues"
+          title="Все задачи"
           team={team}
           actions={
             <Button

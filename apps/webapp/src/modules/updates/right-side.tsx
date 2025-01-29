@@ -14,9 +14,9 @@ export const NotificationRightSide = observer(() => {
   return (
     <>
       <Inbox className="text-muted-foreground" size={32} />
-      <div className="text-muted-foreground">Inbox</div>
+      <div className="text-muted-foreground">Входящие</div>
       <div className="text-muted-foreground text-sm">
-        {notifications.length} unread notifications
+        {notifications.length} непрочитанных уведомлений
       </div>
     </>
   );

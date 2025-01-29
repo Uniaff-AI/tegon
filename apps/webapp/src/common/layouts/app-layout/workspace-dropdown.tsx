@@ -51,7 +51,7 @@ export const WorkspaceDropdown = observer(() => {
               push(`/${query.workspaceSlug}/settings/overview`);
             }}
           >
-            Workspace settings
+              Настройки рабочей области
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => {

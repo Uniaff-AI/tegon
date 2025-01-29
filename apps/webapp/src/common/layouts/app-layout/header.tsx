@@ -15,7 +15,7 @@ export const Header = observer(() => {
   return (
     <>
       <div className="flex">
-        <TooltipWrapper tooltip="Create new issue (C)">
+        <TooltipWrapper tooltip="Создать новую задачу (C)">
           <Button
             variant="ghost"
             className="justify-start w-fit px-1.5"
@@ -28,7 +28,7 @@ export const Header = observer(() => {
           </Button>
         </TooltipWrapper>
 
-        <TooltipWrapper tooltip="Search issues (CMD + /)">
+        <TooltipWrapper tooltip="Поиск задач (CMD + /)">
           <Button
             variant="ghost"
             size="sm"

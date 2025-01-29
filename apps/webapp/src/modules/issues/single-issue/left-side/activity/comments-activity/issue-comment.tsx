@@ -66,7 +66,7 @@ export function IssueComment() {
               suggestion,
             }),
           ]}
-          placeholder="Leave your comment..."
+          placeholder="Напиши свой комментарий..."
           onSubmit={onSubmit}
           className="w-full min-h-[60px] mb-0 p-2 border-border border relative"
         >

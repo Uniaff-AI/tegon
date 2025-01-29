@@ -63,7 +63,7 @@ export function SearchDialog({ open, setOpen }: SearchDialogProps) {
       commandProps={{ shouldFilter: false }}
     >
       <CommandInput
-        placeholder="Type a command or search..."
+        placeholder="Напишите название задачи"
         onValueChange={(value: string) => setQuery(value)}
       />
       {!isLoading && issues && issues.length === 0 && (

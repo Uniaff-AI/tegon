@@ -34,7 +34,7 @@ export const useProjectColumns = (): Array<ColumnDef<ProjectType>> => {
     {
       accessorKey: 'title',
       header: () => {
-        return <span className="px-4">Title</span>;
+        return <span className="px-4">Название</span>;
       },
       cell: ({ row }) => {
         return (
@@ -48,14 +48,14 @@ export const useProjectColumns = (): Array<ColumnDef<ProjectType>> => {
     {
       accessorKey: 'progress',
       header: () => {
-        return <span className="px-2">Progress</span>;
+        return <span className="px-2">Прогресс</span>;
       },
       cell: ({ row }) => <ProjectProgress id={row.original.id} onlyGraph />,
     },
     {
       accessorKey: 'endDate',
       header: () => {
-        return <span className="px-2">Target date</span>;
+        return <span className="px-2">Дедлайн</span>;
       },
       cell: ({ row }) => (
         <ProjectWrapper
@@ -69,7 +69,7 @@ export const useProjectColumns = (): Array<ColumnDef<ProjectType>> => {
     {
       accessorKey: 'status',
       header: () => {
-        return <span className="px-2">Status</span>;
+        return <span className="px-2">Статус</span>;
       },
 
       cell: ({ row }) => {
