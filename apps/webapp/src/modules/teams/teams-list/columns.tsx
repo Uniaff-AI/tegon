@@ -45,7 +45,7 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
     {
       accessorKey: 'title',
       header: () => {
-        return <span className="px-4">Title</span>;
+        return <span className="px-4">Название</span>;
       },
       cell: ({ row }) => {
         return (
@@ -59,7 +59,7 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
     {
       accessorKey: 'Team Identifier',
       header: () => {
-        return <span className="px-4 whitespace-nowrap">Team Identifier</span>;
+        return <span className="px-4 whitespace-nowrap">Идентификатор команды</span>;
       },
       cell: ({ row }) => {
         return (
@@ -73,7 +73,7 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
       accessorKey: 'Membership Status',
       header: () => {
         return (
-          <span className="px-4 whitespace-nowrap">Membership Status</span>
+          <span className="px-4 whitespace-nowrap">Статус</span>
         );
       },
       cell: ({ row }) => {
@@ -105,7 +105,7 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
     {
       accessorKey: 'Created At',
       header: () => {
-        return <span className="px-4 whitespace-nowrap">Created At</span>;
+        return <span className="px-4 whitespace-nowrap">Дата создания</span>;
       },
       cell: ({ row }) => {
         return (

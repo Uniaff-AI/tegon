@@ -99,7 +99,7 @@ export function TeamOptionsDropdown({
                 }}
               >
                 <div className="flex items-center gap-1">
-                  <DeleteLine size={16} /> Leave team
+                  <DeleteLine size={16} /> Покинуть команду
                 </div>
               </DropdownMenuItem>
             )}

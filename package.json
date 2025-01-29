@@ -28,6 +28,7 @@
   },
   "packageManager": "pnpm@8.15.6",
   "dependencies": {
+    "@tegonhq/ui": "^0.2.29",
     "date-fns": "^3.6.0",
     "react-day-picker": "^8.9.1"
   }

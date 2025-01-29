@@ -40,7 +40,7 @@ export const Header = observer(
               onClick={() => setNewProjectDialog(true)}
             >
               <AddLine size={14} />
-              Create project
+              Создать проект
             </Button>
           </div>
         )}

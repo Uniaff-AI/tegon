@@ -37,7 +37,7 @@ export const Header = observer(({ title }: HeaderProps) => {
         href={`/${workspaceSlug}/settings/new_team`}
       >
         <AddLine size={14} />
-        Create Team
+        Создать команду
       </Link>
     </div>
   );

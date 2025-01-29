@@ -3,7 +3,7 @@ import { HeaderLayout } from 'common/header-layout';
 export function Header() {
   return (
     <HeaderLayout>
-      <h3> My issues </h3>
+      <h3> Мои задачи </h3>
     </HeaderLayout>
   );
 }

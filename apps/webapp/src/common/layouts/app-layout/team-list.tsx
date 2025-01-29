@@ -39,7 +39,7 @@ export const TeamList = observer(() => {
 
   return (
     <div ref={containerRef} className="mt-4">
-      <div className="mb-2">Your teams</div>
+      <div className="mb-2">Ваши команды</div>
 
       <Accordion
         type="single"

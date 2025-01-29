@@ -54,13 +54,13 @@ export const AppLayoutChild = observer(({ children }: LayoutProps) => {
               <Nav
                 links={[
                   {
-                    title: 'Inbox',
+                    title: 'Входящие',
                     icon: Inbox,
                     href: `/${workspaceSlug}/inbox`,
                     count: notificationsStore.unReadCount,
                   },
                   {
-                    title: 'My issues',
+                    title: 'Мои задачи',
                     icon: MyIssues,
                     href: `/${workspaceSlug}/my-issues`,
                   },
@@ -70,12 +70,12 @@ export const AppLayoutChild = observer(({ children }: LayoutProps) => {
                     href: `/${workspaceSlug}/views`,
                   },
                   {
-                    title: 'Projects',
+                    title: 'Проекты',
                     icon: Project,
                     href: `/${workspaceSlug}/projects`,
                   },
                   {
-                    title: 'Teams',
+                    title: 'Команды',
                     icon: TeamLine,
                     href: `/${workspaceSlug}/teams`,
                   },
@@ -83,7 +83,7 @@ export const AppLayoutChild = observer(({ children }: LayoutProps) => {
               />
               <TeamList />
             </div>
-            <BottomBar />
+            {/*<BottomBar />*/}
           </div>
         )}
 
