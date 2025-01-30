@@ -26,21 +26,21 @@ export const AppliedFiltersView = observer(() => {
           onClick={(e) => e.stopPropagation()}
         >
           <FilterItemView
-            name="Status"
+            name="Статус"
             filterKey="status"
             filter={filters.status}
             Component={IssueStatusDropdown}
           />
 
           <FilterItemView
-            name="Assignee"
+            name="Исполнитель"
             filterKey="assignee"
             filter={filters.assignee}
             Component={IssueAssigneeDropdown}
           />
 
           <FilterItemView
-            name="Label"
+            name="Метка"
             filterKey="label"
             filter={filters.label}
             isArray
@@ -48,49 +48,49 @@ export const AppliedFiltersView = observer(() => {
           />
 
           <FilterItemView
-            name="Priority"
+            name="Приоритет"
             filterKey="priority"
             filter={filters.priority}
             Component={IssuePriorityDropdown}
           />
 
           <FilterItemView
-            name="Cycle"
+            name="Цикл"
             filterKey="cycle"
             filter={filters.cycle}
             Component={IssueCycleDropdown}
           />
 
           <FilterItemView
-            name="Project"
+            name="Проект"
             filterKey="project"
             filter={filters.project}
             Component={IssueProjectDropdown}
           />
 
           <FilterItemView
-            name="Parent issues"
+            name="Родительские задачи"
             filterKey="isParent"
             filter={filters.isParent}
             Component={() => <>parent</>}
           />
 
           <FilterItemView
-            name="Sub issues"
+            name="Подзадачи"
             filterKey="isSubIssue"
             filter={filters.isSubIssue}
             Component={() => <>sub-issue</>}
           />
 
           <FilterItemView
-            name="Blocked issues"
+            name="Заблокированные задачи"
             filterKey="isBlocked"
             filter={filters.isBlocked}
             Component={() => <>blocked</>}
           />
 
           <FilterItemView
-            name="Blocking issues"
+            name="Блокирующие задачи"
             filterKey="isBlocking"
             filter={filters.isBlocking}
             Component={() => <>blocking</>}

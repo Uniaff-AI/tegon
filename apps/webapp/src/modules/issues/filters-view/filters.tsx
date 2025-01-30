@@ -180,7 +180,7 @@ export const Filters = observer(({ onClose }: FiltersProps) => {
             }}
           >
             <CommandInput
-              placeholder="Type for filters..."
+              placeholder="Введите для фильтров..."
               value={value}
               onValueChange={setValue}
               containerClassName="border-0 rounded-md min-w-[400px] pl-0 py-1 bg-background-2"

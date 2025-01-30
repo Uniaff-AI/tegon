@@ -42,7 +42,7 @@ export const TeamSettingsList = observer(() => {
       <div className="flex flex-col items-start justify-start w-full">
         <div className="flex items-center mb-2">
           <TeamLine size={20} />
-          <div className="ml-1">Teams</div>
+          <div className="ml-1">Команды</div>
         </div>
 
         <div className="flex flex-col w-full">
@@ -104,7 +104,7 @@ export const TeamSettingsList = observer(() => {
           href={`/${workspaceSlug}/settings/new_team`}
         >
           <RiAddLine size={18} />
-          <div>Add team</div>
+          <div>Добавить команду</div>
         </Link>
       </div>
     </div>

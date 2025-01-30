@@ -34,7 +34,7 @@ export const Header = observer(({ title }: HeaderProps) => {
       }
       className={cn(buttonVariants({ variant: 'secondary' }))}
     >
-      New view
+      Новое представление
     </Link>
   );
 

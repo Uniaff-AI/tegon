@@ -53,7 +53,7 @@ export const Overview = observer(() => {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col">
-        <h2 className="text-xl"> Workspace </h2>
+        <h2 className="text-xl"> Рабочее пространство </h2>
       </div>
 
       <SettingSection
@@ -70,7 +70,7 @@ export const Overview = observer(() => {
                   <FormItem>
                     <FormLabel>Название рабочей области</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tesla" {...field} />
+                      <Input placeholder="Название" {...field} />
                     </FormControl>
 
                     <FormMessage />

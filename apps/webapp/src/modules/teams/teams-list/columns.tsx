@@ -25,8 +25,8 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
   const { mutate: addTeamMember } = useAddTeamMemberMutation({
     onSuccess: () => {
       toast({
-        title: 'Team',
-        description: 'Joined team successfully',
+        title: 'Команда',
+        description: 'Успешно присоединились к команде',
       });
     },
   });
@@ -81,7 +81,7 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
           <div className="capitalize pl-4 py-2 flex items-center gap-1">
             {teamAccessList.includes(row.original.id) ? (
               <Badge variant="secondary" className="flex items-center gap-1">
-                <CheckLine size={14} /> Joined
+                <CheckLine size={14} /> Присоединился
               </Badge>
             ) : (
               <Button
@@ -94,7 +94,7 @@ export const useProjectColumns = (): Array<ColumnDef<TeamType>> => {
                   })
                 }
               >
-                Join team
+                Присоединиться к команде
               </Button>
             )}
           </div>

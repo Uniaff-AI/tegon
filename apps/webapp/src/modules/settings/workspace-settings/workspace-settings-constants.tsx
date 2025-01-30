@@ -13,11 +13,11 @@ export const SECTION_COMPONENTS = {
 };
 
 export const SECTION_TITLES = {
-  overview: 'Overview',
-  labels: 'Labels',
-  members: 'Members',
-  new_team: 'Add team',
-  export: 'Export',
+  overview: 'Обзор',
+  labels: 'Метки',
+  members: 'Участники',
+  new_team: 'Добавить команду',
+  export: 'Экспорт',
 };
 
 type StringKeys<T> = {

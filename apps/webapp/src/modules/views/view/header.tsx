@@ -56,7 +56,7 @@ export const Header = observer(({ title, view, actions }: HeaderProps) => {
               <div className={`w-5 h-5 rounded-sm`}>
                 <StackLine size={20} />
               </div>
-              <span className="inline-block">Views</span>
+              <span className="inline-block">Представления</span>
             </BreadcrumbLink>
           </BreadcrumbItem>
         )}

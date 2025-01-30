@@ -34,7 +34,7 @@ export const Header = observer(({ title }: HeaderProps) => {
               className="flex items-center gap-2"
               href={`/${workspaceSlug}/settings/overview`}
             >
-              Settings
+              Настройки
             </BreadcrumbLink>
           </BreadcrumbItem>
           {team && (

@@ -21,13 +21,13 @@ export const Templates = observer(() => {
 
   return (
     <SettingSection
-      title="Templates"
-      description="Any templates created here will be available while creating issues in that respective team"
+      title="Шаблоны"
+      description="Любые шаблоны, созданные здесь, будут доступны при создании задач в соответствующей команде."
     >
       <div className="flex flex-col gap-1">
         <div className="flex w-full justify-end">
           <Button variant="secondary" onClick={() => setCreateTemplate(true)}>
-            Create template
+            Создать шаблон
           </Button>
         </div>
 

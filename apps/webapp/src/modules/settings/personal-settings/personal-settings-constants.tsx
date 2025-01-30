@@ -11,9 +11,9 @@ export const SECTION_COMPONENTS = {
 };
 
 export const SECTION_TITLES = {
-  profile: 'Profile',
-  preferences: 'Preferences',
-  security: 'Security',
+  profile: 'Профиль',
+  preferences: 'Настройки',
+  security: 'Безопасность',
   api: 'Api',
 };
 

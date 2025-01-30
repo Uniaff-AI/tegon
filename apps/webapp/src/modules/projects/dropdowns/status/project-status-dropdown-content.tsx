@@ -21,7 +21,7 @@ interface ProjectStatusDropdownContentProps {
 
 export const statuses = [
   {
-    name: 'Backlog',
+    name: 'Бэклог',
     color: '1',
     Icon: BacklogLine,
   },

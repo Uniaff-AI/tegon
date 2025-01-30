@@ -61,7 +61,7 @@ export function SidebarNav({ className, ...props }: SidebarNavProps) {
           <div className="flex flex-col items-start justify-start w-full">
             <div className="flex items-center mb-1">
               <BuildingLine size={20} />
-              <div className="ml-1">Workspace</div>
+              <div className="ml-1">Рабочее пространство</div>
             </div>
 
             <div className="flex flex-col w-full gap-0.5">
@@ -88,7 +88,7 @@ export function SidebarNav({ className, ...props }: SidebarNavProps) {
           <div className="flex flex-col items-start justify-start w-full">
             <div className="flex items-center mb-1">
               <UserLine size={20} />
-              <div className="ml-1">My Account</div>
+              <div className="ml-1">Мой аккаунт</div>
             </div>
 
             <div className="flex flex-col w-full gap-0.5">

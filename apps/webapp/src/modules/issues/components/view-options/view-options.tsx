@@ -35,17 +35,17 @@ export const ViewOptions = observer(() => {
           <div className="w-full">
             <div className="flex flex-col p-3 pb-2">
               <h4 className="text-sm text-muted-foreground">
-                Completed filter
+                Фильтр завершённых
               </h4>
               <CompletedFilter />
             </div>
             <div className="flex flex-col gap-2 p-3 pt-0">
               <h4 className="text-sm text-muted-foreground">
-                Display settings
+                Настройки отображения
               </h4>
 
               <ViewOptionItem
-                text="Show sub-issues"
+                text="Показать подзадачи"
                 id="showSubIssues"
                 checked={applicationStore.displaySettings.showSubIssues}
                 onCheckedChange={(value: boolean) =>
@@ -56,7 +56,7 @@ export const ViewOptions = observer(() => {
               />
 
               <ViewOptionItem
-                text="Show empty groups"
+                text="Показать пустые группы"
                 id="showEmptyGroups"
                 checked={applicationStore.displaySettings.showEmptyGroups}
                 onCheckedChange={(value: boolean) =>
@@ -67,7 +67,7 @@ export const ViewOptions = observer(() => {
               />
 
               <ViewOptionItem
-                text="View issue in sidebar"
+                text="Просмотреть задачу в боковой панели"
                 id="viewIssueInSidebar"
                 checked={viewType === 'side_view'}
                 onCheckedChange={(value: boolean) =>

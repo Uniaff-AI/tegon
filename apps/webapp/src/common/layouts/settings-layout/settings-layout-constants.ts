@@ -5,42 +5,42 @@ export interface LinkItem {
 
 export const WORKSPACE_LINKS: LinkItem[] = [
   {
-    title: 'Overview',
+    title: 'Обзор',
     href: 'overview',
   },
   {
-    title: 'Labels',
+    title: 'Метки',
     href: 'labels',
   },
   {
-    title: 'Members',
+    title: 'Участники',
     href: 'members',
   },
   {
-    title: 'Integrations',
+    title: 'Интеграции',
     href: 'integrations',
   },
   {
-    title: 'Actions',
+    title: 'Действия',
     href: 'actions',
   },
   {
-    title: 'Export',
+    title: 'Экспорт',
     href: 'export',
   },
 ];
 
 export const ACCOUNT_LINKS: LinkItem[] = [
   {
-    title: 'Profile',
+    title: 'Профиль',
     href: 'profile',
   },
   {
-    title: 'Security',
+    title: 'Безопасность',
     href: 'security',
   },
   {
-    title: 'Preferences',
+    title: 'Настройки',
     href: 'preferences',
   },
   {
@@ -51,23 +51,23 @@ export const ACCOUNT_LINKS: LinkItem[] = [
 
 export const TEAM_LINKS: LinkItem[] = [
   {
-    title: 'Overview',
+    title: 'Обзор',
     href: 'overview',
   },
   {
-    title: 'Members',
+    title: 'Участники',
     href: 'members',
   },
   {
-    title: 'Templates',
+    title: 'Шаблоны',
     href: 'templates',
   },
   {
-    title: 'Workflow',
+    title: 'Рабочий процесс',
     href: 'workflow',
   },
   {
-    title: 'Labels',
+    title: 'Метки',
     href: 'labels',
   },
 ];

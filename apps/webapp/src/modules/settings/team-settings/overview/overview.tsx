@@ -114,7 +114,7 @@ export const Overview = observer(() => {
                 variant="secondary"
                 isLoading={form.formState.isSubmitting}
               >
-                Update
+                Обновить
               </Button>
             </form>
           </Form>

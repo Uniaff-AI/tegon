@@ -26,8 +26,8 @@ export const Labels = observer(() => {
 
   return (
     <SettingSection
-      title="Team labels"
-      description={`Manage team ${currentTeam.name} specific labels`}
+      title="Метки команды"
+      description={`Управляйте специфическими метками команды ${currentTeam.name}`}
     >
       <div className="flex flex-col">
         <div className="mb-4">
@@ -41,12 +41,12 @@ export const Labels = observer(() => {
                   setNewLabelCreation(true);
                 }}
               >
-                New label
+                Новая метка
               </Button>
             </div>
             <div className="flex">
               <Input
-                placeholder="Filter by name"
+                placeholder="Фильтр по имени"
                 onChange={(e) => setSearchValue(e.currentTarget.value)}
               />
             </div>

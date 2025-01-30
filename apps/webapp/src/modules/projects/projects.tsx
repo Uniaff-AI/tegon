@@ -14,7 +14,7 @@ export const Projects = withApplicationStore(() => {
   useScope(SCOPES.AllIssues);
 
   return (
-    <MainLayout header={<Header title="Projects" />}>
+    <MainLayout header={<Header title="Проекты" />}>
       <ProjectsList />
     </MainLayout>
   );

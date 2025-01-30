@@ -31,7 +31,7 @@ export function MemberOptionsDropdown({
     onError: (err: string) => {
       toast({
         variant: 'destructive',
-        title: 'Error!',
+        title: 'Ошибка!',
         description: err,
       });
     },
@@ -40,8 +40,8 @@ export function MemberOptionsDropdown({
   const { mutate: suspendUser } = useSuspendUserMutation({
     onSuccess: () => {
       toast({
-        title: 'Success',
-        description: 'User has been suspended',
+        title: 'Успех.',
+        description: 'Пользователь был приостановлен',
       });
     },
   });
@@ -76,7 +76,7 @@ export function MemberOptionsDropdown({
                   }}
                 >
                   <div className="flex items-center gap-1">
-                    <CanceledLine size={16} /> Suspend
+                    <CanceledLine size={16} /> Приостановить
                   </div>
                 </DropdownMenuItem>
               </>
@@ -91,7 +91,7 @@ export function MemberOptionsDropdown({
                 }}
               >
                 <div className="flex items-center gap-1">
-                  <DeleteLine size={16} /> Remove from team
+                  <DeleteLine size={16} /> Удалить из команды
                 </div>
               </DropdownMenuItem>
             )}

@@ -41,7 +41,7 @@ export const WorkspaceDropdown = observer(() => {
               push(`/${query.workspaceSlug}/settings/account/profile`);
             }}
           >
-            Preferences
+            Настройки
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -58,7 +58,7 @@ export const WorkspaceDropdown = observer(() => {
               push(`/${query.workspaceSlug}/settings/members`);
             }}
           >
-            Invite & manage members
+              Пригласить и управлять участниками
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -71,7 +71,7 @@ export const WorkspaceDropdown = observer(() => {
             replace('/auth');
           }}
         >
-          Log out
+            Выйти из системы
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

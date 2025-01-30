@@ -15,7 +15,7 @@ export const Teams = withApplicationStore(() => {
   useScope(SCOPES.AllIssues);
 
   return (
-    <MainLayout header={<Header title="Teams" />}>
+    <MainLayout header={<Header title="Команды" />}>
       <TeamsList />
     </MainLayout>
   );

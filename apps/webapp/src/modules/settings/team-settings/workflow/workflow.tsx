@@ -82,10 +82,8 @@ export const Workflow = observer(() => {
 
   return (
     <SettingSection
-      title="Workflow"
-      description="Workflows define the type and order of statuses that issues go through
-    from start to completion. Here you can customize and re-order the
-    available workflow statuses."
+      title="Рабочий процесс"
+      description="Рабочие процессы определяют тип и порядок статусов, через которые задачи проходят от начала до завершения. Здесь вы можете настраивать и изменять порядок доступных статусов рабочего процесса."
     >
       <Board onDragEnd={onDragEnd} className="w-full" onDragStart={onDragStart}>
         <div className="flex flex-col w-full">

@@ -45,7 +45,7 @@ const AddMemberDialogSchema = z.object({
   emailIds: z.string(),
   teamIds: z
     .array(z.string())
-    .min(1, { message: 'At least one team should be selected' }),
+    .min(1, { message: 'Необходимо выбрать хотя бы одну команду' }),
   role: z.string(), // Ensure it's cast as a tuple of RoleEnum values
 });
 
@@ -68,15 +68,15 @@ export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
   const { mutate: inviteUsers, isLoading } = useInviteUsersMutation({
     onSuccess: () => {
       toast({
-        title: 'Invites sent',
-        description: 'Invitations are sent to the emails',
+        title: 'Приглашения отправлены',
+        description: 'Приглашения отправлены на электронные адреса',
       });
       onClose();
     },
     onError: (e) => {
       toast({
-        title: 'Invites failed',
-        description: `Try again after sometime: ${e}`,
+        title: 'Приглашения не отправлены',
+        description: `Повторите попытку через некоторое время: ${e}`,
       });
     },
   });
@@ -102,9 +102,9 @@ export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
       <DialogContent className="sm:max-w-[600px] p-6">
         <DialogHeader className="pb-0">
           <DialogTitle className="font-normal flex flex-col gap-1">
-            <div className="flex gap-1 items-center">Add member</div>
+            <div className="flex gap-1 items-center">Добавить участника</div>
             <div className="text-muted-foreground text-left text-base leading-5 max-w-[300px]">
-              Invite member to the workspace
+              Пригласить участника в рабочее пространство
             </div>
           </DialogTitle>
         </DialogHeader>
@@ -120,12 +120,12 @@ export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
                 name="emailIds"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel>Emails</FormLabel>
+                    <FormLabel>Электронные письма</FormLabel>
                     <FormControl>
                       <Textarea
                         {...field}
                         className="focus-visible:ring-0 bg-grayAlpha-100 w-full min-h-[60px]"
-                        placeholder="elon@tesla.com, sam@tesla.com"
+                        placeholder="пример@почта, пример@почта"
                       />
                     </FormControl>
                   </FormItem>
@@ -137,7 +137,7 @@ export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
                 name="role"
                 render={({ field }) => (
                   <FormItem className="my-3">
-                    <FormLabel>Invite as </FormLabel>
+                    <FormLabel>Пригласить как </FormLabel>
 
                     <FormControl>
                       <Select
@@ -171,11 +171,11 @@ export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
                 name="teamIds"
                 render={({ field }) => (
                   <FormItem className="my-3">
-                    <FormLabel>Add to teams </FormLabel>
+                    <FormLabel>Добавить в команды </FormLabel>
 
                     <FormControl>
                       <MultiSelect
-                        placeholder="Select teams"
+                        placeholder="Выбрать команду"
                         options={teamsStore.teams.map((team: TeamType) => ({
                           value: team.id,
                           label: team.name,
@@ -190,10 +190,10 @@ export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
 
               <div className="flex items-end gap-2 justify-end w-full mt-2">
                 <Button variant="ghost" type="button" onClick={onClose}>
-                  Cancel
+                  Отмена
                 </Button>
                 <Button variant="secondary" type="submit" isLoading={isLoading}>
-                  Invite
+                  Пригласить
                 </Button>
               </div>
             </form>

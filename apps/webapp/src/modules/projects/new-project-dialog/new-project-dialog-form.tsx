@@ -49,7 +49,7 @@ export function NewProjectForm({
                   rows={1}
                   cols={1}
                   autoFocus
-                  placeholder="Project title"
+                  placeholder="Название проекта"
                   {...field}
                 />
               </div>
@@ -70,7 +70,7 @@ export function NewProjectForm({
                   {...field}
                   className="new-project-editor min-h-[100px]"
                   editorClassName="min-h-[100px]"
-                  placeholder="Describe your project"
+                  placeholder="Опишите ваш проект"
                   extensions={[AiWritingExtension]}
                 >
                   <EditorExtensions suggestionItems={suggestionItems} />
@@ -112,7 +112,7 @@ export function NewProjectForm({
               <ProjectDatePicker
                 value={field.value}
                 onChange={field.onChange}
-                text="End date"
+                text="Дата окончания"
               />
             );
           }}
@@ -127,10 +127,10 @@ export function NewProjectForm({
             disabled={isLoading}
             onClick={onClose}
           >
-            Cancel
+              Отмена
           </Button>
           <Button type="submit" isLoading={isLoading} variant="secondary">
-            Create project
+              Создать проект
           </Button>
         </div>
       </div>

@@ -88,9 +88,9 @@ export const ViewsList = observer(() => {
   return (
     <div className="flex flex-col">
       <div className="flex gap-2 text-sm text-muted-foreground pl-8 pr-4 py-2 border-b border-border">
-        <div className="min-w-[200px] grow">Name</div>
-        <div className="min-w-[70px]">Created</div>
-        <div className="min-w-[70px]">Created by</div>
+        <div className="min-w-[200px] grow">Имя</div>
+        <div className="min-w-[70px]">Создано</div>
+        <div className="min-w-[70px]">Создано пользователем</div>
       </div>
 
       {views

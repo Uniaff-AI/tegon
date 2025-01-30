@@ -13,11 +13,11 @@ export const SECTION_COMPONENTS = {
 };
 
 export const SECTION_TITLES = {
-  overview: 'Overview',
-  workflow: 'Workflow',
-  labels: 'Labels',
-  members: 'Members',
-  templates: 'Templates',
+  overview: 'Обзор',
+  workflow: 'Рабочий процесс',
+  labels: 'Метки',
+  members: 'Участники',
+  templates: 'Шаблоны',
 };
 
 type StringKeys<T> = {

@@ -25,8 +25,8 @@ export const CreateNewTemplate = observer(
       if (!isLoading) {
         if (!name) {
           toast({
-            title: 'Template save error',
-            description: 'Please give the template a name',
+            title: 'Ошибка сохранения шаблона',
+            description: 'Пожалуйста, укажите название шаблона',
           });
           return;
         }
@@ -41,8 +41,8 @@ export const CreateNewTemplate = observer(
           {
             onSuccess: (data) => {
               toast({
-                title: 'Template successfully created',
-                description: `${data.name} template is created`,
+                title: 'Шаблон успешно создан',
+                description: `Шаблон ${data.name} создан`,
               });
               onClose();
             },
@@ -54,11 +54,11 @@ export const CreateNewTemplate = observer(
     return (
       <div className="flex flex-col gap-2 p-4 rounded bg-background-3">
         <div className="flex flex-col gap-0.5">
-          <label> Template name </label>
+          <label> Название шаблона </label>
           <Input
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
-            placeholder="Template name"
+            placeholder="Название шаблона"
           />
         </div>
         <Separator className="mt-4" />

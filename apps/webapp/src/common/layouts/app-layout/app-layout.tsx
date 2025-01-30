@@ -64,7 +64,7 @@ export const AppLayoutChild = observer(({ children }: LayoutProps) => {
                     href: `/${workspaceSlug}/my-issues`,
                   },
                   {
-                    title: 'Views',
+                    title: 'Представления',
                     icon: StackLine,
                     href: `/${workspaceSlug}/views`,
                   },

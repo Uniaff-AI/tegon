@@ -46,8 +46,8 @@ export function CreateNewTeam() {
   const { mutate: createTeam } = useCreateTeamMutation({
     onSuccess: (data: TeamType) => {
       toast({
-        title: 'Created!',
-        description: `New team ${data.name} is created`,
+        title: 'Создано!',
+        description: `Новая команда ${data.name} создана`,
       });
       form.reset();
     },
@@ -59,8 +59,8 @@ export function CreateNewTeam() {
 
   return (
     <SettingSection
-      title="Create a new team"
-      description=" Create a new team to manage seperate workflows"
+      title="Создать новую команду"
+      description=" Создайте новую команду, чтобы управлять отдельными рабочими процессами"
     >
       <div className="max-w-[400px]">
         <Form {...form}>
@@ -70,9 +70,9 @@ export function CreateNewTeam() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Team name</FormLabel>
+                  <FormLabel>Название команды</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. Engineering" {...field} />
+                    <Input placeholder="Например, Engineering" {...field} />
                   </FormControl>
 
                   <FormMessage />
@@ -84,14 +84,13 @@ export function CreateNewTeam() {
               name="identifier"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Team identifier</FormLabel>
+                  <FormLabel>Идентификатор команды</FormLabel>
                   <FormDescription>
-                    This is used as the identifier (e.g ENG-123) for all issues
-                    of the team.
+                    Это используется в качестве идентификатора (например, ENG-123) для всех задач команды.
                   </FormDescription>
 
                   <FormControl>
-                    <Input placeholder="e.g. ENG" {...field} />
+                    <Input placeholder="Например, ENG" {...field} />
                   </FormControl>
 
                   <FormMessage />
@@ -105,7 +104,7 @@ export function CreateNewTeam() {
                 variant="secondary"
                 isLoading={form.formState.isSubmitting}
               >
-                Create
+                Создать
               </Button>
             </div>
           </form>

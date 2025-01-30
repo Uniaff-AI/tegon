@@ -29,7 +29,7 @@ export const DefaultFilterDropdown = observer(
           className="flex items-center"
           onSelect={onSelect}
         >
-          <UnscopedLine size={16} className="mr-2" /> Status
+          <UnscopedLine size={16} className="mr-2" /> Статус
         </CommandItem>
 
         <CommandItem
@@ -39,7 +39,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={onSelect}
         >
           <AssigneeLine size={16} className="mr-2" />
-          Assignee
+            Исполнитель
         </CommandItem>
         <CommandItem
           key="Label"
@@ -48,7 +48,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={onSelect}
         >
           <LabelLine size={16} className="mr-2" />
-          Label
+            Метка
         </CommandItem>
         <CommandItem
           key="Priority"
@@ -57,7 +57,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={onSelect}
         >
           <PriorityHigh size={16} className="mr-2" />
-          Priority
+            Приоритет
         </CommandItem>
         <CommandItem
           key="Cycle"
@@ -66,7 +66,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={onSelect}
         >
           <Cycle size={16} className="mr-2" />
-          Cycle
+            Цикл
         </CommandItem>
         {!project && (
           <CommandItem
@@ -76,7 +76,7 @@ export const DefaultFilterDropdown = observer(
             onSelect={onSelect}
           >
             <Project size={16} className="mr-2" />
-            Project
+              Проект
           </CommandItem>
         )}
         <Separator className="my-1" />
@@ -87,7 +87,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={() => onSelect('isParent')}
         >
           <ParentIssueLine size={16} className="mr-2" />
-          Parent issues
+            Родительские задачи
         </CommandItem>
         <CommandItem
           key="subIssues"
@@ -96,7 +96,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={() => onSelect('isSubIssue')}
         >
           <SubIssue size={14} className="mr-2" />
-          Sub issues
+            Подзадачи
         </CommandItem>
         <CommandItem
           key="blockedIssues"
@@ -105,7 +105,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={() => onSelect('isBlocked')}
         >
           <BlockedFill size={16} className="mr-2 text-red-500" />
-          Blocked issues
+            Заблокированные задачи
         </CommandItem>
         <CommandItem
           key="blockingIssues"
@@ -114,7 +114,7 @@ export const DefaultFilterDropdown = observer(
           onSelect={() => onSelect('isBlocking')}
         >
           <BlocksFill size={16} className="mr-2 text-orange-500" />
-          Blocking issues
+            Блокирующие задачи
         </CommandItem>
       </CommandGroup>
     );

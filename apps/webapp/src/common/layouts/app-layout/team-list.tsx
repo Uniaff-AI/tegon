@@ -50,13 +50,13 @@ export const TeamList = observer(() => {
         {teams.map((team: TeamType) => {
           let links: Link[] = [
             {
-              title: 'Issues',
+              title: 'Задачи',
               icon: IssuesLine,
               href: `/${workspace.slug}/team/${team.identifier}/all`,
               activePaths: [`/${workspace.slug}/issue/${team.identifier}-`],
             },
             {
-              title: 'Views',
+              title: 'Представления',
               icon: StackLine,
               href: `/${workspace.slug}/team/${team.identifier}/views`,
             },

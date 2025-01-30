@@ -50,7 +50,7 @@ export const ProjectView = withApplicationStore(() => {
     <MainLayout
       header={
         <Header
-          title="Projects"
+          title="Проекты"
           isProjectView
           view={view}
           setView={setView}

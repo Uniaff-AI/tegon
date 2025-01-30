@@ -40,8 +40,8 @@ export const ShowMembersDropdown = observer(() => {
   const { mutate: addTeamMember } = useAddTeamMemberMutation({
     onSuccess: () => {
       toast({
-        title: 'Team',
-        description: 'Member added successfully',
+        title: 'Команда',
+        description: 'Участник успешно добавлен',
       });
     },
   });
@@ -62,11 +62,11 @@ export const ShowMembersDropdown = observer(() => {
     <>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <Button variant="secondary">Add member</Button>
+          <Button variant="secondary">Добавить участника</Button>
         </PopoverTrigger>
         <PopoverContent className="w-72 p-0" align="end">
           <Command>
-            <CommandInput placeholder="Choose member" autoFocus />
+            <CommandInput placeholder="Выбрать участника" autoFocus />
             <ScrollArea className="max-h-48 overflow-auto">
               <CommandGroup>
                 {isLoading && <Loader />}
@@ -86,9 +86,9 @@ export const ShowMembersDropdown = observer(() => {
                     </CommandItem>
                   ))}
                 <CommandItem onSelect={() => setNewMemberDialog(true)}>
-                  Invite people
+                  Пригласить людей
                 </CommandItem>
-                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandEmpty>Результатов не найдено.</CommandEmpty>
               </CommandGroup>
             </ScrollArea>
           </Command>

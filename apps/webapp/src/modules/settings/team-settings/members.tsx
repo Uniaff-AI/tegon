@@ -38,15 +38,15 @@ export const Members = observer(() => {
   return (
     <>
       <SettingSection
-        title="Team Members"
-        description={`Manage who is a member of the ${team.name} team`}
+        title="Участники команды"
+        description={`Управляйте тем, кто является членом команды ${team.name}.`}
       >
         <div>
           {!isLoading && (
             <div className="flex flex-col">
               <div className="flex justify-between items-center">
                 <ShowMembersDropdown />
-                <h3 className="text-xs"> {users.length} Members </h3>
+                <h3 className="text-xs"> {users.length} Участники </h3>
               </div>
 
               <div className="mt-4 flex flex-col gap-2">

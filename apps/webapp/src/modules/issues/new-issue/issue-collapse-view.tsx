@@ -51,7 +51,7 @@ export const IssueCollapseView = observer(
 
     function getUserData(userId: string) {
       if (userId === 'no-user') {
-        return { username: 'No Assignee', fullname: 'No Assignee' };
+        return { username: 'Нет исполнителя', fullname: 'Нет исполнителя' };
       }
 
       return users.find((userData: User) => userData.id === userId);

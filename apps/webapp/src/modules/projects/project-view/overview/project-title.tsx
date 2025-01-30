@@ -27,7 +27,7 @@ export function ProjectTitle({ value, onChange }: ProjectTitleProps) {
       rows={1}
       cols={1}
       value={inputValue}
-      placeholder="Project title"
+      placeholder="Название проекта"
       onChange={onInputChange}
     />
   );

@@ -47,7 +47,7 @@ export const getColumns = (
   return [
     {
       accessorKey: 'title',
-      header: () => <span>Issue</span>,
+      header: () => <span>Задача</span>,
 
       cell: ({ row }: RowType) => {
         const team = teamsStore.getTeamWithId(row.original.teamId);
@@ -68,7 +68,7 @@ export const getColumns = (
     },
     {
       accessorKey: 'assignee',
-      header: () => <span>Assignee</span>,
+      header: () => <span>Исполнитель</span>,
       cell: ({ row }: RowType) => {
         return (
           <div>
@@ -86,7 +86,7 @@ export const getColumns = (
     },
     {
       accessorKey: 'status',
-      header: () => <span>Status</span>,
+      header: () => <span>Статус</span>,
       cell: ({ row }: RowType) => {
         const team = teamsStore.getTeamWithId(row.original.teamId);
         return (

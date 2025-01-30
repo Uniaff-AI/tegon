@@ -70,7 +70,7 @@ export const AssigneeList = observer(({ users }: AssigneeListProps) => {
       childContent = (
         <>
           <AssigneeLine className="h-5 w-5" />
-          <h3 className="pl-2">No assignee</h3>
+          <h3 className="pl-2">Нет исполнителя</h3>
         </>
       );
     } else {

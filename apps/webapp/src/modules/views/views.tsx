@@ -6,7 +6,7 @@ import { ViewsList } from './views-list';
 
 export function Views() {
   return (
-    <MainLayout header={<Header title="Views" />}>
+    <MainLayout header={<Header title="Представления" />}>
       <ViewsList />
     </MainLayout>
   );
