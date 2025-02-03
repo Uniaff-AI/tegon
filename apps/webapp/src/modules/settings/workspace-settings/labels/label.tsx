@@ -44,12 +44,12 @@ export function Label({ label, setEditLabelState }: LabelProps) {
           <DropdownMenuContent align="end">
             <DropdownMenuItem onClick={() => setEditLabelState(label.id)}>
               <div className="flex items-center gap-1">
-                <EditLine size={16} /> Edit
+                <EditLine size={16} /> Редактировать
               </div>
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setDeleteAlert(true)}>
               <div className="flex items-center gap-1">
-                <DeleteLine size={16} /> Delete
+                <DeleteLine size={16} /> Удалить
               </div>
             </DropdownMenuItem>
           </DropdownMenuContent>
