@@ -62,5 +62,5 @@ export function UserDataWrapper(props: Props): React.ReactElement {
     return <UserContext.Provider value={data}>{children}</UserContext.Provider>;
   }
 
-  return <Loader text="Loading user data" />;
+  return <Loader text="Загрузка данных пользователя" />;
 }
