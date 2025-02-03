@@ -48,7 +48,7 @@ export function Auth() {
         // can tell you so you know why their sign in / up was not allowed.
         toast({
           variant: 'destructive',
-          title: 'Error!',
+          title: 'Ошибка!',
           description: response.reason,
         });
       } else {
@@ -61,14 +61,14 @@ export function Auth() {
         // this may be a custom error message sent from the API by you,
         toast({
           variant: 'destructive',
-          title: 'Error!',
+          title: 'Ошибка!',
           description: err.message,
         });
       } else {
         toast({
           variant: 'destructive',
-          title: 'Error!',
-          description: 'Oops! Something went wrong.',
+          title: 'Ошибка!',
+          description: 'Ой! Что-то пошло не так.',
         });
       }
     }
@@ -81,11 +81,10 @@ export function Auth() {
       <AuthLayout>
         <div className="flex flex-col gap-2">
           <div className="flex flex-col w-[360px] gap-4 items-center">
-            <h1 className="text-lg text-center">We've sent you a magic link</h1>
+            <h1 className="text-lg text-center">Мы отправили вам волшебную ссылку</h1>
             <Inbox size={32} />
             <div className="text-center text-muted-foreground">
-              We sent you an email which contains a magic link that will log you
-              in to your account.
+              Мы отправили вам письмо, содержащее волшебную ссылку, которая войдет в вашу учетную запись.
             </div>
           </div>
           <div className="flex justify-start items-center">
@@ -95,7 +94,7 @@ export function Auth() {
               onClick={() => setEmailSent(false)}
             >
               <ArrowLeft size={14} />
-              Re-enter email
+              Назад
             </Button>
           </div>
         </div>
@@ -106,9 +105,9 @@ export function Auth() {
   return (
     <AuthLayout>
       <div className="flex flex-col w-[360px]">
-        <h1 className="text-lg text-center">Welcome</h1>
+        <h1 className="text-lg text-center">Добро пожаловать!</h1>
         <div className="text-center text-muted-foreground mt-1 mb-8">
-          Create an account or login
+          Создать аккаунт или войти
         </div>
 
         <div className="flex flex-col gap-2">
@@ -121,7 +120,7 @@ export function Auth() {
                   <FormItem>
                     <FormControl>
                       <Input
-                        placeholder="Email address"
+                        placeholder="Электронная почта"
                         className="h-9"
                         {...field}
                       />
@@ -141,7 +140,7 @@ export function Auth() {
                   isLoading={loading}
                   variant="secondary"
                 >
-                  <RiMailFill size={18} /> Send a magic link
+                  <RiMailFill size={18} /> Отправить волшебную ссылку.
                 </Button>
               </div>
             </form>
@@ -149,8 +148,7 @@ export function Auth() {
         </div>
 
         <div className="mt-4 text-xs text-muted-foreground">
-          By clicking continue, you agree to our Terms of Service and Privacy
-          Policy.
+
         </div>
       </div>
     </AuthLayout>

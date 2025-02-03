@@ -30,14 +30,14 @@ export function Verify() {
           response.user.loginMethods.length === 1
         ) {
           toast({
-            title: 'Success!',
-            description: 'Sign up successfully!',
+            title: 'Успех!',
+            description: 'Успешная регистрация!',
           });
           posthog.capture('user_signed_up', { email: response.user.emails[0] });
         } else {
           toast({
-            title: 'Success!',
-            description: 'Sign in successfully!',
+            title: 'Успех!',
+            description: 'Успешный вход!',
           });
         }
         router.replace(redirectToPath ? (redirectToPath as string) : '/');
@@ -50,8 +50,8 @@ export function Verify() {
         // enter email / phone UI again.
         await clearLoginAttemptInfo();
         toast({
-          title: 'Error!',
-          description: 'Login failed. Please try again',
+          title: 'Ошибка!',
+          description: 'Ошибка входа. Пожалуйста, попробуйте снова',
         });
         router.replace('/auth');
       }
@@ -59,14 +59,14 @@ export function Verify() {
     } catch (err: any) {
       if (err.isSuperTokensGeneralError === true) {
         toast({
-          title: 'Error!',
+          title: 'Ошибка!',
           description: err.message,
         });
         // this may be a custom error message sent from the API by you.
       } else {
         toast({
-          title: 'Error!',
-          description: 'Oops! Something went wrong.',
+          title: 'Ошибка!',
+          description: 'Ой! Что-то пошло не так.',
         });
       }
     }

@@ -26,7 +26,7 @@ export const CreateNewTeamSchema = z.object({
   name: z
     .string()
     .min(2, {
-      message: 'Team name must be atleast 2 characters',
+      message: 'Название команды должно содержать как минимум 2 символа',
     })
     .max(50),
   identifier: z.string().min(3).max(3),

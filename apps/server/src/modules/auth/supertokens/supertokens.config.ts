@@ -84,7 +84,7 @@ export const recipeList = (
               try {
                 await mailerService.sendMail({
                   to: email,
-                  subject: 'Login for Tegon',
+                  subject: 'Вход в Union Jira',
                   template: 'loginUser',
                   context: {
                     userName: email.split('@')[0],
@@ -94,7 +94,7 @@ export const recipeList = (
                 });
               } catch (error) {
                 logger.error({
-                  message: `Error while sending mail`,
+                  message: `Ошибка при отправке письма`,
                   where: `supertokens.config.recipeList`,
                   error,
                 });

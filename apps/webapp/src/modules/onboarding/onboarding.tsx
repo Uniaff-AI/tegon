@@ -31,9 +31,9 @@ export function Onboarding() {
   return (
     <AuthLayout>
       <div className="flex flex-col w-[360px]">
-        <h1 className="text-lg">✋ Welcome to Tegon</h1>
+        <h1 className="text-lg">✋ Добро пожаловать в Union Jira!</h1>
         <div className="text-muted-foreground mt-1 mb-8">
-          We just need to take couple of information before we proceed
+          Нам нужно собрать несколько данных, прежде чем продолжить
         </div>
 
         <div className="flex flex-col gap-2">

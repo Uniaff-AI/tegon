@@ -34,7 +34,7 @@ export function OnboardingForm() {
       onError: (e: any) => {
         toast({
           variant: 'destructive',
-          title: 'Error!',
+          title: 'Ошибка!',
           description: e,
         });
       },
@@ -79,9 +79,9 @@ export function OnboardingForm() {
           name="workspaceName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Workspace name</FormLabel>
+              <FormLabel>Название рабочего пространства</FormLabel>
               <FormControl>
-                <Input placeholder="Tegon" className="h-9" {...field} />
+                <Input placeholder="Название рабочего пространства" className="h-9" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -93,9 +93,9 @@ export function OnboardingForm() {
           name="teamName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Team name</FormLabel>
+              <FormLabel>Название команды</FormLabel>
               <FormControl>
-                <Input placeholder="Engineering" className="h-9" {...field} />
+                <Input placeholder="Название команды" className="h-9" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -107,7 +107,7 @@ export function OnboardingForm() {
           name="teamIdentifier"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Team identifier</FormLabel>
+              <FormLabel>Идентификатор команды</FormLabel>
 
               <FormControl>
                 <Input placeholder="ENG" className="h-9" {...field} />
@@ -125,8 +125,7 @@ export function OnboardingForm() {
             isLoading={isLoading}
             type="submit"
             variant="secondary"
-          >
-            Continue
+          >Продолжить
           </Button>
         </div>
       </form>

@@ -55,11 +55,11 @@ export const TeamList = observer(() => {
               href: `/${workspace.slug}/team/${team.identifier}/all`,
               activePaths: [`/${workspace.slug}/issue/${team.identifier}-`],
             },
-            {
-              title: 'Представления',
-              icon: StackLine,
-              href: `/${workspace.slug}/team/${team.identifier}/views`,
-            },
+            // {
+            //   title: 'Представления',
+            //   icon: StackLine,
+            //   href: `/${workspace.slug}/team/${team.identifier}/views`,
+            // },
           ];
 
           if (team.preferences.cyclesEnabled) {
