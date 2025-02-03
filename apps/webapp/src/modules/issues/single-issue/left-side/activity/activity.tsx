@@ -17,21 +17,21 @@ export function Activity() {
       <div className="flex flex-col">
         <div className="flex justify-between items-start">
           <div className="flex flex-col gap-1">
-            <h2 className="text-md">Activity</h2>
+            <h2 className="text-md">Активность</h2>
             <TabsList className="grid w-full grid-cols-2 bg-transparent gap-2 p-0">
               <TabsTrigger
                 value="comments"
                 className="bg-grayAlpha-100 px-2 flex gap-1"
               >
                 <SendLine size={16} />
-                Comments
+                Комментарии
               </TabsTrigger>
               <TabsTrigger
                 value="activity"
                 className="bg-grayAlpha-100 flex gap-1"
               >
                 <ActivityLine size={16} />
-                Activity
+                Активность
               </TabsTrigger>
             </TabsList>
           </div>

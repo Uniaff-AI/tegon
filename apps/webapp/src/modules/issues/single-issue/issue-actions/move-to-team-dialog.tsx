@@ -45,16 +45,15 @@ export function MoveToTeamDialog({
     <AlertDialog open={moveToTeamDialog} onOpenChange={setMoveToTeamDialog}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>Вы совершенно уверены?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently move this issue
-            to the team
+            Эту операцию нельзя отменить. Это приведет к постоянному перемещению этой задачи в команду.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel>Отменить</AlertDialogCancel>
           <AlertDialogAction onClick={onDeleteIssue}>
-            Continue
+            Продолжить
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

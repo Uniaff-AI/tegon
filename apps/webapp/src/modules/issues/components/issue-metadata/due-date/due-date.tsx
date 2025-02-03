@@ -60,7 +60,7 @@ export function DueDate({
     return (
       <div className="flex items-center">
         <AddLine size={16} className="mr-2" />
-        Add Due date
+        Добавить срок выполнения
       </div>
     );
   };

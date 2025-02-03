@@ -33,7 +33,7 @@ export function SubIssueView({ childIssues, issueId }: SubIssueViewProps) {
             <CollapsibleTrigger asChild>
               <div className="flex items-center">
                 <Button variant="link" className="px-0 text-md">
-                  Sub-issues
+                  Под-вопросы
                   {isOpen ? (
                     <ChevronDown size={16} className="ml-1" />
                   ) : (

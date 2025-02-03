@@ -30,7 +30,7 @@ export function RelatedDropdownItems({
     <>
       <DropdownMenuSub>
         <DropdownMenuSubTrigger>
-          <DropdownItem Icon={RelatedIssueLine} title="Add related" />
+          <DropdownItem Icon={RelatedIssueLine} title="Добавить связанные" />
         </DropdownMenuSubTrigger>
         <DropdownMenuPortal>
           <DropdownMenuSubContent>
@@ -39,7 +39,7 @@ export function RelatedDropdownItems({
                 setRelatedModal(IssueRelationEnum.PARENT);
               }}
             >
-              <DropdownItem Icon={ParentIssueLine} title="Parent of..." />
+              <DropdownItem Icon={ParentIssueLine} title="Родительский элемент для..." />
             </DropdownMenuItem>
 
             <DropdownMenuItem
@@ -47,7 +47,7 @@ export function RelatedDropdownItems({
                 setRelatedModal(IssueRelationEnum.SUB_ISSUE);
               }}
             >
-              <DropdownItem Icon={SubIssue} title=" Sub-issue of..." />
+              <DropdownItem Icon={SubIssue} title=" Подвопрос к..." />
             </DropdownMenuItem>
 
             <DropdownMenuItem
@@ -55,7 +55,7 @@ export function RelatedDropdownItems({
                 setRelatedModal(IssueRelationEnum.RELATED);
               }}
             >
-              <DropdownItem Icon={RelatedIssueLine} title=" Related to..." />
+              <DropdownItem Icon={RelatedIssueLine} title=" Связано с..." />
             </DropdownMenuItem>
 
             <DropdownMenuItem
@@ -63,7 +63,7 @@ export function RelatedDropdownItems({
                 setRelatedModal(IssueRelationEnum.BLOCKED);
               }}
             >
-              <DropdownItem Icon={BlockedFill} title=" Blocked by..." />
+              <DropdownItem Icon={BlockedFill} title=" Заблокировано..." />
             </DropdownMenuItem>
 
             <DropdownMenuItem
@@ -71,7 +71,7 @@ export function RelatedDropdownItems({
                 setRelatedModal(IssueRelationEnum.BLOCKS);
               }}
             >
-              <DropdownItem Icon={BlocksFill} title="Blocks..." />
+              <DropdownItem Icon={BlocksFill} title="Блокирует..." />
             </DropdownMenuItem>
 
             <DropdownMenuItem
@@ -79,7 +79,7 @@ export function RelatedDropdownItems({
                 setRelatedModal(IssueRelationEnum.DUPLICATE_OF);
               }}
             >
-              <DropdownItem Icon={DuplicateLine} title="Duplicate of..." />
+              <DropdownItem Icon={DuplicateLine} title="Дубликат..." />
             </DropdownMenuItem>
           </DropdownMenuSubContent>
         </DropdownMenuPortal>

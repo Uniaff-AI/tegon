@@ -101,7 +101,7 @@ export const IssueRelations = observer(({ issue }: IssueRelationsProps) => {
     return (
       <div className="flex gap-1 text-xs items-center bg-grayAlpha-100 h-5 rounded-sm px-2">
         <SubIssue className="h-3 w-3" />
-        <div>Sub-issues</div>
+        <div>Под-вопросы</div>
         <div className="text-muted-foreground">{subIssues.length}</div>
       </div>
     );

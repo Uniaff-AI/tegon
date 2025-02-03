@@ -21,7 +21,7 @@ export function SubscribeView() {
   const { mutate: toggleSubscribed } = useUpdateIssueSubscribeMutation({
     onSuccess: () => {
       toast({
-        description: `You have ${subscribed ? 'unsubscribed' : 'subscribed'} to issue ${issue.number}`,
+        description: `Вы ${subscribed ? 'отписались' : 'подписались'} на задачу ${issue.number}`,
       });
     },
   });
@@ -37,7 +37,7 @@ export function SubscribeView() {
     <div className="flex gap-2 shrink-0 items-center">
       <div>
         <Button variant="ghost" onClick={toggleSubscribe} className="mr-1">
-          {subscribed ? 'Unsubscribe' : 'Subscribe'}
+          {subscribed ? 'Отписаться' : 'Подписаться'}
         </Button>
       </div>
       {issue.subscriberIds.length > 0 && (

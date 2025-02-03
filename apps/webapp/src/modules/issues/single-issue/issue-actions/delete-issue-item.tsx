@@ -14,7 +14,7 @@ export function DeleteIssueItem({
   return (
     <>
       <DropdownMenuItem onClick={() => setDeleteIssueDialog(true)}>
-        <DropdownItem Icon={RiDeleteBin7Line} title="Delete" />
+        <DropdownItem Icon={RiDeleteBin7Line} title="Удалить" />
       </DropdownMenuItem>
     </>
   );

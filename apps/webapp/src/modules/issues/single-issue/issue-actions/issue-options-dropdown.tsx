@@ -46,7 +46,7 @@ export function IssueOptionsDropdown() {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           <DropdownMenuItem onClick={() => setMoveIssueDialog(true)}>
-            <DropdownItem Icon={ArrowForwardLine} title="Move to team" />
+            <DropdownItem Icon={ArrowForwardLine} title="Переместить в команду" />
           </DropdownMenuItem>
 
           <RelatedDropdownItems setRelatedModal={setRelatedModal} />
