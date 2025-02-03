@@ -67,7 +67,7 @@ export function IssueStatusDropdown({ value, onChange }: IssueStatusProps) {
         </PopoverTrigger>
         <PopoverContent className="w-72 p-0" align="start">
           <Command shouldFilter={false}>
-            <CommandInput placeholder="Set status..." autoFocus />
+            <CommandInput placeholder="Установить статус..." autoFocus />
             <IssueStatusDropdownContent
               onChange={change}
               onClose={() => setOpen(false)}

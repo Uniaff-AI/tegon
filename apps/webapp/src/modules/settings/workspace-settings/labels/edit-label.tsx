@@ -39,16 +39,16 @@ export function EditLabel({ onCancel, label }: NewLabelProps) {
             value={labelName}
             className="w-full"
             onChange={(e) => setLabelName(e.target.value)}
-            placeholder="Label name"
+            placeholder="Название метки"
           />
         </div>
 
         <div className="flex gap-4">
           <Button variant="outline" disabled={isLoading} onClick={onCancel}>
-            Cancel
+            Отменить
           </Button>
           <Button isLoading={isLoading} onClick={onSubmit}>
-            Save
+            Сохранить
           </Button>
         </div>
       </div>

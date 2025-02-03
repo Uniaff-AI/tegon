@@ -61,7 +61,7 @@ export const RightSide = observer(() => {
     <>
       <div className="grow py-4 flex flex-col gap-4">
         <div className="flex flex-col items-start px-6">
-          <label className="text-xs">Status</label>
+          <label className="text-xs">Статус</label>
           <ProjectStatusDropdown
             value={project.status}
             variant={ProjectDropdownVariant.LINK}
@@ -70,7 +70,7 @@ export const RightSide = observer(() => {
         </div>
 
         <div className="flex flex-col items-start px-6">
-          <label className="text-xs">Start Date</label>
+          <label className="text-xs">Дата начала</label>
 
           <ProjectDatePicker
             value={project.startDate}
@@ -80,7 +80,7 @@ export const RightSide = observer(() => {
         </div>
 
         <div className="flex flex-col items-start px-6">
-          <label className="text-xs">End Date</label>
+          <label className="text-xs">Дата окончания</label>
 
           <ProjectDatePicker
             value={project.endDate}
@@ -90,7 +90,7 @@ export const RightSide = observer(() => {
         </div>
 
         <div className="flex flex-col items-start px-6">
-          <label className="text-xs">Teams</label>
+          <label className="text-xs">Команды</label>
 
           <TeamsDropdown
             value={project.teams}

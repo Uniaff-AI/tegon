@@ -109,7 +109,7 @@ const defaultPlaceholder = Placeholder.configure({
       return 'Type in your code here...';
     }
 
-    return 'Describe your issue...';
+    return 'Опишите вашу проблему...';
   },
   includeChildren: true,
 });

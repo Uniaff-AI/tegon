@@ -91,7 +91,7 @@ export function NewIssueTitle({ form, index }: NewIssueTitleProps) {
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <p>Click to generate title</p>
+          <p>Нажмите, чтобы сгенерировать заголовок</p>
         </TooltipContent>
       </Tooltip>
       <FormField
@@ -104,7 +104,7 @@ export function NewIssueTitle({ form, index }: NewIssueTitleProps) {
                 <AdjustableTextArea
                   className="border-0 py-0 resize-none bg-transparent no-scrollbar overflow-hidden outline-none focus-visible:ring-0 w-fit"
                   placeholderClassName="font-medium"
-                  placeholder="Issue title"
+                  placeholder="Заголовок проблемы"
                   {...field}
                 />
               </div>

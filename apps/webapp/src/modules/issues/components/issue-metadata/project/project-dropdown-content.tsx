@@ -43,7 +43,7 @@ export function ProjectDropdownContent({
     <CommandGroup>
       <DropdownItem
         id="no-project"
-        value="No Project"
+        value="Нет проекта"
         index={0}
         onSelect={() => {
           if (!multiple) {
@@ -66,7 +66,7 @@ export function ProjectDropdownContent({
           )}
           <div className="flex grow">
             <Project size={20} className="mr-2" />
-            No Project
+            Нет проекта
           </div>
         </div>
       </DropdownItem>

@@ -90,7 +90,7 @@ export function ProjectDropdown({
           ) : (
             <div className="text-muted-foreground flex">
               <Project size={20} className="mr-2" />
-              No Project
+              Нет проекта
             </div>
           )}
         </Button>
@@ -114,7 +114,7 @@ export function ProjectDropdown({
           </div>
         ) : (
           <>
-            <Project size={20} className="mr-1" /> No Project
+            <Project size={20} className="mr-1" /> Нет проекта
           </>
         )}
       </Button>
@@ -131,7 +131,7 @@ export function ProjectDropdown({
         <PopoverTrigger asChild>{getTrigger()}</PopoverTrigger>
         <PopoverContent className="p-0" align="end">
           <Command>
-            <CommandInput placeholder="Set project..." autoFocus />
+            <CommandInput placeholder="Установить проект..." autoFocus />
             <ProjectDropdownContent
               onClose={() => setOpen(false)}
               projects={projects}

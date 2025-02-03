@@ -32,49 +32,49 @@ export enum Priorities {
 
 export const workflowSeedData = [
   {
-    name: 'Triage',
+    name: 'Триаж',
     category: WorkflowCategoryEnum.TRIAGE,
     color: '0',
     position: 0,
   },
   {
-    name: 'Unscoped',
+    name: 'Неопределенный',
     category: WorkflowCategoryEnum.BACKLOG,
     color: '1',
     position: 0,
   },
   {
-    name: 'Backlog',
+    name: 'Реестр задач',
     category: WorkflowCategoryEnum.BACKLOG,
     color: '2',
     position: 1,
   },
   {
-    name: 'Todo',
+    name: 'Сделать',
     category: WorkflowCategoryEnum.UNSTARTED,
     color: '3',
     position: 0,
   },
   {
-    name: 'In Progress',
+    name: 'В процессе',
     category: WorkflowCategoryEnum.STARTED,
     color: '4',
     position: 0,
   },
   {
-    name: 'In Review',
+    name: 'На проверке',
     category: WorkflowCategoryEnum.STARTED,
     color: '5',
     position: 1,
   },
   {
-    name: 'Done',
+    name: 'Готово',
     category: WorkflowCategoryEnum.COMPLETED,
     color: '6',
     position: 0,
   },
   {
-    name: 'Canceled',
+    name: 'Отменено',
     category: WorkflowCategoryEnum.CANCELED,
     color: '3',
     position: 0,

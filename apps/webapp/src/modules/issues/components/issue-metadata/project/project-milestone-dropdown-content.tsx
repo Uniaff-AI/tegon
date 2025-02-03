@@ -45,7 +45,7 @@ export const ProjectMilestoneDropdownContent = observer(
       <CommandGroup>
         <DropdownItem
           id="no-project-milestone"
-          value="No Project"
+          value="Нет проекта"
           index={0}
           onSelect={() => {
             if (!multiple) {
@@ -71,7 +71,7 @@ export const ProjectMilestoneDropdownContent = observer(
             )}
             <div className="flex grow">
               <LabelLine size={20} className="mr-2" />
-              No Project Milestone
+                Нет этапа проекта
             </div>
           </div>
         </DropdownItem>

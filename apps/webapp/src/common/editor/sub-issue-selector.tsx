@@ -80,7 +80,7 @@ export const SubIssueSelector = ({
           </Button>
         </TooltipTrigger>
         <TooltipContent side="bottom">
-          {subIssue ? `Create sub issue` : `Create issue`}
+          {subIssue ? `Создать подзадачу` : `Создать задачу`}
         </TooltipContent>
       </Tooltip>
     </div>

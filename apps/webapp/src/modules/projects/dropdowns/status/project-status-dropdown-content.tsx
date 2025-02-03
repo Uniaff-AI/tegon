@@ -25,10 +25,10 @@ export const statuses = [
     color: '1',
     Icon: BacklogLine,
   },
-  { name: 'Planned', color: '2', Icon: TodoLine },
-  { name: 'In Progress', color: '4', Icon: InProgressLine },
-  { name: 'Done', color: '6', Icon: DoneFill },
-  { name: 'Canceled', color: '3', Icon: CanceledLine },
+  { name: 'Запланированный', color: '2', Icon: TodoLine },
+  { name: 'В процессе', color: '4', Icon: InProgressLine },
+  { name: 'Сделано', color: '6', Icon: DoneFill },
+  { name: 'Отменено', color: '3', Icon: CanceledLine },
 ];
 
 export function ProjectStatusDropdownContent({

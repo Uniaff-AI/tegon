@@ -2,7 +2,7 @@ import { SubIssue } from '@tegonhq/ui/icons';
 
 export const allCommands = [
   {
-    name: 'Create sub-issue',
+    name: 'Создать подзадачу',
     id: 'create-sub-issue',
     Icon: SubIssue,
   },

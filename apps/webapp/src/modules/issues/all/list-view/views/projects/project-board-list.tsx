@@ -256,7 +256,7 @@ export const NoProjectView = observer(() => {
             <div className="flex gap-1 items-center mb-2 w-[310px]">
               <div className="flex items-center w-fit h-8 rounded-2xl px-4 py-2 bg-grayAlpha-100">
                 <Project size={20} />
-                <h3 className="pl-2">No Project</h3>
+                <h3 className="pl-2">Нет проекта</h3>
               </div>
 
               <div className="rounded-2xl bg-grayAlpha-100 p-1.5 px-2 font-mono">

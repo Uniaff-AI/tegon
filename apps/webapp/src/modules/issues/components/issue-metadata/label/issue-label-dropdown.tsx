@@ -121,7 +121,7 @@ export const IssueLabelDropdown = observer(
         return (
           <>
             <LabelLine size={20} className="text-muted-foreground mr-2" />
-            {value.length} Labels
+            {value.length} Метки
           </>
         );
       }

@@ -109,7 +109,7 @@ export const IssueStatusDropdown = observer(
           <PopoverPortal>
             <PopoverContent className="w-72 p-0" align="start">
               <Command>
-                <CommandInput placeholder="Set status..." autoFocus />
+                <CommandInput placeholder="Установить статус..." autoFocus />
                 <IssueStatusDropdownContent
                   onChange={onChange}
                   onClose={() => setOpen(false)}

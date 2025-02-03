@@ -184,7 +184,7 @@ export const NewIssueForm = observer(
 
           <div className="flex items-center p-3 pr-0 pb-0 shrink-0 justify-end">
             <div className="flex gap-2 items-center">
-              {aiLoading && <Loader text="Thinking..." variant="horizontal" />}
+              {aiLoading && <Loader text="Думаю..." variant="horizontal" />}
               {isSubIssue && (
                 <Button
                   variant="ghost"
@@ -205,11 +205,11 @@ export const NewIssueForm = observer(
                   disabled={isLoading}
                   onClick={onClose}
                 >
-                  Cancel
+                  Отменить
                 </Button>
               )}
               <Button type="submit" isLoading={isLoading} variant="secondary">
-                {isTemplate ? 'Save template' : 'Create issue'}
+                {isTemplate ? 'Сохранить шаблон' : 'Создать проблему'}
               </Button>
             </div>
           </div>

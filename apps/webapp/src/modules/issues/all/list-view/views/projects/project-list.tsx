@@ -70,7 +70,7 @@ export const ProjectList = observer(({ projects }: ProjectListProps) => {
       childContent = (
         <>
           <Project className="h-5 w-5" />
-          <h3 className="pl-2">No project</h3>
+          <h3 className="pl-2">Нет проекта</h3>
         </>
       );
     } else {

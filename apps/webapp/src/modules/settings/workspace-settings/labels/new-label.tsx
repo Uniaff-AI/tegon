@@ -44,16 +44,16 @@ export function NewLabel({ onCancel, teamId }: NewLabelProps) {
             value={labelName}
             className="w-full"
             onChange={(e) => setLabelName(e.target.value)}
-            placeholder="Label name"
+            placeholder="Название метки"
           />
         </div>
 
         <div className="flex gap-4">
           <Button variant="ghost" disabled={isLoading} onClick={onCancel}>
-            Cancel
+            Отменить
           </Button>
           <Button isLoading={isLoading} variant="secondary" onClick={onSubmit}>
-            Save
+            Сохранить
           </Button>
         </div>
       </div>

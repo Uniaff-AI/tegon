@@ -91,12 +91,12 @@ export const MilestoneItem = observer(
               <DropdownMenuGroup>
                 <DropdownMenuItem onClick={() => setEdit(milestone)}>
                   <div className="flex items-center gap-1">
-                    <EditLine size={16} /> Edit
+                    <EditLine size={16} /> Редактировать
                   </div>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setDeleteOpen(true)}>
                   <div className="flex items-center gap-1">
-                    <DeleteLine size={16} /> Remove
+                    <DeleteLine size={16} /> Удалить
                   </div>
                 </DropdownMenuItem>
               </DropdownMenuGroup>
@@ -108,20 +108,19 @@ export const MilestoneItem = observer(
           <AlertDialog open onOpenChange={setDeleteOpen}>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogTitle>Вы абсолютно уверены?</AlertDialogTitle>
                 <AlertDialogDescription>
-                  This action cannot be undone. This will project milestone from
-                  the issues also.
+                  Это действие нельзя отменить. Это удалит этап проекта и из проблем.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogCancel>Отмена</AlertDialogCancel>
                 <AlertDialogAction
                   onClick={() => {
                     deleteMilestone(milestone.id);
                   }}
                 >
-                  Continue
+                  Продолжить
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
@@ -172,7 +171,7 @@ export const CreateMilestone = ({
       <LabelLine size={16} className="flex-shrink-0" />
       <Input
         className="bg-transparent"
-        placeholder="Milestone"
+        placeholder="Этапы"
         value={input}
         onChange={(e) => setInput(e.currentTarget.value)}
       />
@@ -203,7 +202,7 @@ export const Milestones = observer(() => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-between px-6 items-center">
-        <h3> Milestones</h3>
+        <h3> Этапы</h3>
         <Button variant="ghost" size="sm" onClick={() => setNewMilestone(true)}>
           <AddLine size={14} />
         </Button>

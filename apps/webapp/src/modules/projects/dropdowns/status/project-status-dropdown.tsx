@@ -91,7 +91,7 @@ export function ProjectStatusDropdown({
         </PopoverTrigger>
         <PopoverContent className="w-72 p-0" align="start">
           <Command shouldFilter={false}>
-            <CommandInput placeholder="Set status..." autoFocus />
+            <CommandInput placeholder="Установить статус..." autoFocus />
             <ProjectStatusDropdownContent
               onChange={onChange}
               onClose={() => setOpen(false)}

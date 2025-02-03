@@ -19,7 +19,7 @@ export const Project = observer(({ view }: { view: 'overview' | 'issues' }) => {
   const project = useProject();
 
   if (!project) {
-    return <h2>No project found</h2>;
+    return <h2>Проект не найден</h2>;
   }
 
   return (

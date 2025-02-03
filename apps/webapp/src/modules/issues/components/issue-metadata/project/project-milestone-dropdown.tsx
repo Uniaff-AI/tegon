@@ -89,7 +89,7 @@ export function ProjectMilestoneDropdown({
           ) : (
             <div className="text-muted-foreground flex">
               <LabelLine size={20} className="mr-2" />
-              No Project Milestone
+              Нет этапа проекта
             </div>
           )}
         </Button>
@@ -113,7 +113,7 @@ export function ProjectMilestoneDropdown({
           </>
         ) : (
           <>
-            <LabelLine size={20} className="mr-1" /> No Project Milestone
+            <LabelLine size={20} className="mr-1" /> Нет этапа проекта
           </>
         )}
       </Button>
@@ -130,7 +130,7 @@ export function ProjectMilestoneDropdown({
         <PopoverTrigger asChild>{getTrigger()}</PopoverTrigger>
         <PopoverContent className="p-0" align="end">
           <Command>
-            <CommandInput placeholder="Set project..." autoFocus />
+            <CommandInput placeholder="Установить проект..." autoFocus />
             <ProjectMilestoneDropdownContent
               onClose={() => setOpen(false)}
               projectMilestones={milestones}

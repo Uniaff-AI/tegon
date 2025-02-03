@@ -92,7 +92,7 @@ export const ProjectProgress = observer(
     return (
       <div className="pt-4 px-4 pb-0 flex w-full gap-10">
         <div className="flex flex-col grow gap-1">
-          <h2>Project Progress</h2>
+          <h2>Ход проекта</h2>
           <Progress
             color={color(completedPercentage)}
             segments={[
@@ -104,19 +104,19 @@ export const ProjectProgress = observer(
           />
         </div>
         <div className="flex flex-col">
-          <h2 className="font-mono">Scope</h2>
-          <p>{issues.length} issues </p>
+          <h2 className="font-mono">Объем</h2>
+          <p>{issues.length} Проблемы </p>
         </div>
         <div className="flex flex-col">
-          <h2 className="font-mono">Started</h2>
+          <h2 className="font-mono">Начато</h2>
           <p>
-            {startedPercentage}% ({startedIssues.length} issues)
+            {startedPercentage}% ({startedIssues.length} Проблемы)
           </p>
         </div>
         <div className="flex flex-col">
-          <h2 className="font-mono">Done</h2>
+          <h2 className="font-mono">Готово</h2>
           <p>
-            {completedPercentage}% ({totalCompletedIssues.length} issues)
+            {completedPercentage}% ({totalCompletedIssues.length} Проблемы)
           </p>
         </div>
       </div>

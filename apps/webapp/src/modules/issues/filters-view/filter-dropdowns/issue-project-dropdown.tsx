@@ -64,7 +64,7 @@ export const IssueProjectDropdown = observer(
           </PopoverTrigger>
           <PopoverContent className="w-72 p-0" align="start">
             <Command>
-              <CommandInput placeholder="Set project..." autoFocus />
+              <CommandInput placeholder="Установить проект..." autoFocus />
               <ProjectDropdownContent
                 onClose={() => setOpen(false)}
                 projects={projects}
