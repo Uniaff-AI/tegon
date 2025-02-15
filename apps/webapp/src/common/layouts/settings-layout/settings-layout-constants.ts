@@ -28,7 +28,7 @@ export const WORKSPACE_LINKS: LinkItem[] = [
     title: 'Экспорт',
     href: 'export',
   },
-];
+].filter((link) => link.href !== 'export');
 
 export const ACCOUNT_LINKS: LinkItem[] = [
   {
@@ -47,7 +47,7 @@ export const ACCOUNT_LINKS: LinkItem[] = [
     title: 'API',
     href: 'api',
   },
-];
+].filter((link) => link.href !== 'api');
 
 export const TEAM_LINKS: LinkItem[] = [
   {
