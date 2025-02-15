@@ -2,7 +2,6 @@ import {
   Inbox,
   MyIssues,
   Project,
-  StackLine,
   TeamLine,
 } from '@tegonhq/ui/icons';
 import { cn } from '@tegonhq/ui/lib/utils';
