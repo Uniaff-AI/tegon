@@ -10,7 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@tegonhq/ui/components/tooltip';
-import { ChevronRight, Cycle, IssuesLine, StackLine } from '@tegonhq/ui/icons';
+import { ChevronRight, Cycle, IssuesLine,  } from '@tegonhq/ui/icons';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 
