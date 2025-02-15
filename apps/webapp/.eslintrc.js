@@ -4,4 +4,7 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  rules: {
+    'no-unused-vars': 'off',  // Отключаем предупреждения о неиспользуемых переменных
+  },
 };
