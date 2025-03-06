@@ -41,74 +41,74 @@ services:
       - 6379:6379
     restart: unless-stopped
 
-  server:
-    image: "tegonhq/tegon-server:${VERSION}"
-    container_name: tegon-server
-    depends_on:
-      - db
-      - supertokens
-      - redis
-      - typesense
-    restart: unless-stopped
-    networks:
-      - tegon
-    env_file:
-      - .env
-    environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - FRONTEND_HOST=${FRONTEND_HOST}
-      - BACKEND_HOST=${BACKEND_HOST}
-      - OAUTH_CALLBACK_URL=${OAUTH_CALLBACK_URL}
-      - SUPERTOKEN_CONNECTION_URI=${SUPERTOKEN_CONNECTION_URI}
-      - REPLICATION_DATABASE_URL=${REPLICATION_DATABASE_URL}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
-      - DB_HOST=${DB_HOST}
-      - DB_PORT=${DB_PORT}
-      - DB_SCHEMA=${DB_SCHEMA}
-      - REDIS_URL=${REDIS_URL}
-      - REDIS_PORT=${REDIS_PORT}
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-      - TYPESENSE_HOST=${TYPESENSE_HOST}
-      - TYPESENSE_PORT=${TYPESENSE_PORT}
-      - TYPESENSE_PROTOCOL=${TYPESENSE_PROTOCOL}
-      - GCP_BUCKET_NAME=${GCP_BUCKET_NAME}
-      - GCP_SERVICE_ACCOUNT_FILE=${GCP_SERVICE_ACCOUNT_FILE}
-      - AWS_REGION=${AWS_REGION}
-      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
-      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-      - PUBLIC_ATTACHMENT_URL=${PUBLIC_ATTACHMENT_URL}
-      - COHERE_API_KEY=${COHERE_API_KEY}
-      - LOCAL_MODEL=${LOCAL_MODEL}
-      - OLLAMA_HOST=${OLLAMA_HOST}
-      - DOCKER_TOKEN=${DOCKER_TOKEN}
-    ports:
-      - 5555:5555
-      - 8001:3001
-    volumes:
-      - ./certs:/app/apps/server/certs
+  # server:
+  #   image: "tegonhq/tegon-server:${VERSION}"
+  #   container_name: tegon-server
+  #   depends_on:
+  #     - db
+  #     - supertokens
+  #     - redis
+  #     - typesense
+  #   restart: unless-stopped
+  #   networks:
+  #     - tegon
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - DATABASE_URL=${DATABASE_URL}
+  #     - FRONTEND_HOST=${FRONTEND_HOST}
+  #     - BACKEND_HOST=${BACKEND_HOST}
+  #     - OAUTH_CALLBACK_URL=${OAUTH_CALLBACK_URL}
+  #     - SUPERTOKEN_CONNECTION_URI=${SUPERTOKEN_CONNECTION_URI}
+  #     - REPLICATION_DATABASE_URL=${REPLICATION_DATABASE_URL}
+  #     - POSTGRES_USER=${POSTGRES_USER}
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  #     - POSTGRES_DB=${POSTGRES_DB}
+  #     - DB_HOST=${DB_HOST}
+  #     - DB_PORT=${DB_PORT}
+  #     - DB_SCHEMA=${DB_SCHEMA}
+  #     - REDIS_URL=${REDIS_URL}
+  #     - REDIS_PORT=${REDIS_PORT}
+  #     - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+  #     - TYPESENSE_HOST=${TYPESENSE_HOST}
+  #     - TYPESENSE_PORT=${TYPESENSE_PORT}
+  #     - TYPESENSE_PROTOCOL=${TYPESENSE_PROTOCOL}
+  #     - GCP_BUCKET_NAME=${GCP_BUCKET_NAME}
+  #     - GCP_SERVICE_ACCOUNT_FILE=${GCP_SERVICE_ACCOUNT_FILE}
+  #     - AWS_REGION=${AWS_REGION}
+  #     - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+  #     - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+  #     - PUBLIC_ATTACHMENT_URL=${PUBLIC_ATTACHMENT_URL}
+  #     - COHERE_API_KEY=${COHERE_API_KEY}
+  #     - LOCAL_MODEL=${LOCAL_MODEL}
+  #     - OLLAMA_HOST=${OLLAMA_HOST}
+  #     - DOCKER_TOKEN=${DOCKER_TOKEN}
+  #   ports:
+  #     - 5555:5555
+  #     - 8001:3001
+  #   volumes:
+  #     - ./certs:/app/apps/server/certs
 
-  webapp:
-    image: "tegonhq/tegon-webapp:${VERSION}"
-    container_name: tegon-webapp
-    restart: unless-stopped
-    depends_on:
-      - server
-    networks:
-      - tegon
-    environment:
-      - BACKEND_URL=${BACKEND_URL}
-      - NEXT_PUBLIC_BASE_HOST=${NEXT_PUBLIC_BASE_HOST}
-      - NEXT_PUBLIC_VERSION=${VERSION}
-      - NEXT_PUBLIC_BACKEND_HOST=${NEXT_PUBLIC_BACKEND_HOST}
-      - NEXT_PUBLIC_POSTHOG_KEY=${NEXT_PUBLIC_POSTHOG_KEY}
-      - NEXT_PUBLIC_POSTHOG_HOST=${NEXT_PUBLIC_POSTHOG_HOST}
-      - NEXT_PUBLIC_SENTRY_DSN=${NEXT_PUBLIC_SENTRY_DSN}
-      - NEXT_PUBLIC_AI_HOST=${NEXT_PUBLIC_AI_HOST}
-      - NEXT_PUBLIC_NODE_ENV=${NODE_ENV}
-    ports:
-      - 8000:3000
+  # webapp:
+  #   image: "tegonhq/tegon-webapp:${VERSION}"
+  #   container_name: tegon-webapp
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - server
+  #   networks:
+  #     - tegon
+  #   environment:
+  #     - BACKEND_URL=${BACKEND_URL}
+  #     - NEXT_PUBLIC_BASE_HOST=${NEXT_PUBLIC_BASE_HOST}
+  #     - NEXT_PUBLIC_VERSION=${VERSION}
+  #     - NEXT_PUBLIC_BACKEND_HOST=${NEXT_PUBLIC_BACKEND_HOST}
+  #     - NEXT_PUBLIC_POSTHOG_KEY=${NEXT_PUBLIC_POSTHOG_KEY}
+  #     - NEXT_PUBLIC_POSTHOG_HOST=${NEXT_PUBLIC_POSTHOG_HOST}
+  #     - NEXT_PUBLIC_SENTRY_DSN=${NEXT_PUBLIC_SENTRY_DSN}
+  #     - NEXT_PUBLIC_AI_HOST=${NEXT_PUBLIC_AI_HOST}
+  #     - NEXT_PUBLIC_NODE_ENV=${NODE_ENV}
+  #   ports:
+  #     - 8000:3000
 
   typesense:
     image: typesense/typesense:0.26.0.rc61
