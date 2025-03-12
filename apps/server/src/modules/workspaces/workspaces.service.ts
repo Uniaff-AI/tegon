@@ -262,9 +262,9 @@ export default class WorkspacesService {
   }
 
   async inviteUsers(
-    session: SessionContainer,
-    workspaceId: string,
-    inviteUsersBody: InviteUsersBody,
+      session: SessionContainer,
+      workspaceId: string,
+      inviteUsersBody: InviteUsersBody,
   ): Promise<Record<string, string>> {
     const { emailIds, teamIds, role } = inviteUsersBody;
     const workspace = await this.getWorkspace(workspaceId);

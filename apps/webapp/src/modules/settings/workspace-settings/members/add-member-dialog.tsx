@@ -2,27 +2,27 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { RoleEnum } from '@tegonhq/types';
 import { Button } from '@tegonhq/ui/components/button';
 import {
-  DialogContent,
-  Dialog,
-  DialogHeader,
-  DialogTitle,
+    DialogContent,
+    Dialog,
+    DialogHeader,
+    DialogTitle,
 } from '@tegonhq/ui/components/dialog';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from '@tegonhq/ui/components/form';
 import { MultiSelect } from '@tegonhq/ui/components/multi-select';
 import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
 } from '@tegonhq/ui/components/select';
 import { Textarea } from '@tegonhq/ui/components/textarea';
 import { useToast } from '@tegonhq/ui/components/use-toast';
@@ -38,168 +38,167 @@ import { useInviteUsersMutation } from 'services/workspace';
 import { useContextStore } from 'store/global-context-provider';
 
 interface AddMemberDialogProps {
-  setDialogOpen: (value: boolean) => void;
+    setDialogOpen: (value: boolean) => void;
 }
 
 const AddMemberDialogSchema = z.object({
-  emailIds: z.string(),
-  teamIds: z
-    .array(z.string())
-    .min(1, { message: 'Необходимо выбрать хотя бы одну команду' }),
-  role: z.string(), // Ensure it's cast as a tuple of RoleEnum values
+    emailIds: z.string(),
+    teamIds: z
+        .array(z.string())
+        .min(1, { message: 'Необходимо выбрать хотя бы одну команду' }),
+    role: z.string(), // Ensure it's cast as a tuple of RoleEnum values
 });
 
 export function AddMemberDialog({ setDialogOpen }: AddMemberDialogProps) {
-  const { toast } = useToast();
-  const { teamsStore } = useContextStore();
-  const form = useForm<z.infer<typeof AddMemberDialogSchema>>({
-    resolver: zodResolver(AddMemberDialogSchema),
-    defaultValues: {
-      emailIds: '',
-      role: RoleEnum.USER,
-      teamIds: [],
-    },
-  });
-
-  const onClose = () => {
-    setDialogOpen(false);
-  };
-
-  const { mutate: inviteUsers, isLoading } = useInviteUsersMutation({
-    onSuccess: () => {
-      toast({
-        title: 'Приглашения отправлены',
-        description: 'Приглашения отправлены на электронные адреса',
-      });
-      onClose();
-    },
-    onError: (e) => {
-      toast({
-        title: 'Приглашения не отправлены',
-        description: `Повторите попытку через некоторое время: ${e}`,
-      });
-    },
-  });
-
-  const onSubmit = ({
-    emailIds,
-    role,
-    teamIds,
-  }: {
-    emailIds: string;
-    role: RoleEnum;
-    teamIds: string[];
-  }) => {
-    inviteUsers({
-      teamIds,
-      emailIds,
-      role,
+    const { toast } = useToast();
+    const { teamsStore } = useContextStore();
+    const form = useForm<z.infer<typeof AddMemberDialogSchema>>({
+        resolver: zodResolver(AddMemberDialogSchema),
+        defaultValues: {
+            emailIds: '',
+            role: RoleEnum.USER,
+            teamIds: [],
+        },
     });
-  };
 
-  return (
-    <Dialog open onOpenChange={setDialogOpen}>
-      <DialogContent className="sm:max-w-[600px] p-6">
-        <DialogHeader className="pb-0">
-          <DialogTitle className="font-normal flex flex-col gap-1">
-            <div className="flex gap-1 items-center">Добавить участника</div>
-            <div className="text-muted-foreground text-left text-base leading-5 max-w-[300px]">
-              Пригласить участника в рабочее пространство
-            </div>
-          </DialogTitle>
-        </DialogHeader>
+    const onClose = () => {
+        setDialogOpen(false);
+    };
 
-        <div className="flex flex-col gap-2 items-center w-full">
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="w-full flex flex-col gap-2"
-            >
-              <FormField
-                control={form.control}
-                name="emailIds"
-                render={({ field }) => (
-                  <FormItem className="w-full">
-                    <FormLabel>Электронные письма</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        {...field}
-                        className="focus-visible:ring-0 bg-grayAlpha-100 w-full min-h-[60px]"
-                        placeholder="пример@почта, пример@почта"
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
+    const { mutate: inviteUsers, isLoading } = useInviteUsersMutation({
+        onSuccess: () => {
+            toast({
+                title: 'Приглашения отправлены',
+                description: 'Приглашения были отправлены на указанные адреса электронной почты',
+            });
+            onClose();
+        },
+        onError: (e) => {
+            toast({
+                title: 'Не удалось отправить приглашения',
+                description: `Попробуйте снова через некоторое время: ${e}`,
+            });
+        },
+    });
 
-              <FormField
-                control={form.control}
-                name="role"
-                render={({ field }) => (
-                  <FormItem className="my-3">
-                    <FormLabel>Пригласить как </FormLabel>
+    const onSubmit = ({
+                          emailIds,
+                          role,
+                          teamIds,
+                      }: {
+        emailIds: string;
+        role: RoleEnum;
+        teamIds: string[];
+    }) => {
+        inviteUsers({
+            teamIds,
+            emailIds,
+            role,
+        });
+    };
 
-                    <FormControl>
-                      <Select
-                        onValueChange={(value: string) => {
-                          field.onChange(value);
-                        }}
-                        defaultValue={field.value}
-                      >
-                        <SelectTrigger className="flex gap-1 items-center">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectGroup>
-                            {[RoleEnum.USER, RoleEnum.ADMIN].map((role) => (
-                              <SelectItem key={role} value={role}>
-                                {capitalizeFirstLetter(role)}
-                              </SelectItem>
-                            ))}
-                          </SelectGroup>
-                        </SelectContent>
-                      </Select>
-                    </FormControl>
+    return (
+        <Dialog open onOpenChange={setDialogOpen}>
+            <DialogContent className="sm:max-w-[600px] p-6">
+                <DialogHeader className="pb-0">
+                    <DialogTitle className="font-normal flex flex-col gap-1">
+                        <div className="flex gap-1 items-center">Добавить участника</div>
+                        <div className="text-muted-foreground text-left text-base leading-5 max-w-[300px]">
+                            Пригласить участника в рабочее пространство
+                        </div>
+                    </DialogTitle>
+                </DialogHeader>
 
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                <div className="flex flex-col gap-2 items-center w-full">
+                    <Form {...form}>
+                        <form
+                            onSubmit={form.handleSubmit(onSubmit)}
+                            className="w-full flex flex-col gap-2"
+                        >
+                            <FormField
+                                control={form.control}
+                                name="emailIds"
+                                render={({ field }) => (
+                                    <FormItem className="w-full">
+                                        <FormLabel>Электронная почта</FormLabel>
+                                        <FormControl>
+                                            <Textarea
+                                                {...field}
+                                                className="focus-visible:ring-0 bg-grayAlpha-100 w-full min-h-[60px]"
+                                                placeholder="elon@tesla.com, sam@tesla.com"
+                                            />
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
 
-              <FormField
-                control={form.control}
-                name="teamIds"
-                render={({ field }) => (
-                  <FormItem className="my-3">
-                    <FormLabel>Добавить в команды </FormLabel>
+                            <FormField
+                                control={form.control}
+                                name="role"
+                                render={({ field }) => (
+                                    <FormItem className="my-3">
+                                        <FormLabel>Пригласить как</FormLabel>
+                                        <FormControl>
+                                            <Select
+                                                onValueChange={(value: string) => {
+                                                    field.onChange(value);
+                                                }}
+                                                defaultValue={field.value}
+                                            >
+                                                <SelectTrigger className="flex gap-1 items-center">
+                                                    <SelectValue />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectGroup>
+                                                        {[RoleEnum.USER, RoleEnum.ADMIN].map(
+                                                            (role) => (
+                                                                <SelectItem key={role} value={role}>
+                                                                    {capitalizeFirstLetter(role)}
+                                                                </SelectItem>
+                                                            ),
+                                                        )}
+                                                    </SelectGroup>
+                                                </SelectContent>
+                                            </Select>
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
 
-                    <FormControl>
-                      <MultiSelect
-                        placeholder="Выбрать команду"
-                        options={teamsStore.teams.map((team: TeamType) => ({
-                          value: team.id,
-                          label: team.name,
-                        }))}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                            <FormField
+                                control={form.control}
+                                name="teamIds"
+                                render={({ field }) => (
+                                    <FormItem className="my-3">
+                                        <FormLabel>Добавить в команды</FormLabel>
+                                        <FormControl>
+                                            <MultiSelect
+                                                placeholder="Выберите команды"
+                                                options={teamsStore.teams.map((team: TeamType) => ({
+                                                    value: team.id,
+                                                    label: team.name,
+                                                }))}
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
 
-              <div className="flex items-end gap-2 justify-end w-full mt-2">
-                <Button variant="ghost" type="button" onClick={onClose}>
-                  Отмена
-                </Button>
-                <Button variant="secondary" type="submit" isLoading={isLoading}>
-                  Пригласить
-                </Button>
-              </div>
-            </form>
-          </Form>
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
+                            <div className="flex items-end gap-2 justify-end w-full mt-2">
+                                <Button variant="ghost" type="button" onClick={onClose}>
+                                    Отмена
+                                </Button>
+                                <Button variant="secondary" type="submit" isLoading={isLoading}>
+                                    Пригласить
+                                </Button>
+                            </div>
+                        </form>
+                    </Form>
+                </div>
+            </DialogContent>
+        </Dialog>
+    );
 }

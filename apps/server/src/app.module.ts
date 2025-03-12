@@ -69,6 +69,7 @@ import { AppService } from './app.service';
 
     MailerModule.forRoot({
       transport: {
+        debug:true,
         host: process.env.SMTP_HOST,
         port: parseInt(process.env.SMTP_PORT),
         secure: process.env.SMTP_USE_SLS === 'true',

@@ -155,16 +155,16 @@ export class WorkspacesController {
   }
 
   @UseGuards(AuthGuard, AdminGuard)
-  @Post(':workspaceId/invite_users')
+  @Post('invite_users')
   async inviteUsers(
-    @SessionDecorator() session: SessionContainer,
-    @Param() workspaceIdRequestBody: WorkspaceRequestParamsDto,
-    @Body() inviteUsersBody: InviteUsersBody,
+      @SessionDecorator() session: SessionContainer,
+      @WorkspaceD() workspaceId: string,
+      @Body() inviteUsersBody: InviteUsersBody,
   ) {
     return await this.workspacesService.inviteUsers(
-      session,
-      workspaceIdRequestBody.workspaceId,
-      inviteUsersBody,
+        session,
+        workspaceId,
+        inviteUsersBody,
     );
   }
 }

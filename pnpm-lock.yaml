@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@tegonhq/sdk':
+        specifier: ^0.1.15
+        version: 0.1.15
+      '@tegonhq/types':
+        specifier: ^0.1.0
+        version: 0.1.0(react@18.3.1)(svelte@5.19.3)(vue@3.5.13)(zod@3.23.8)
       '@tegonhq/ui':
         specifier: ^0.2.29
         version: 0.2.29(@tiptap/extension-code-block@2.11.3)(@types/react@18.3.18)(highlight.js@11.11.1)(javascript-time-ago@2.5.11)(lowlight@3.3.0)(react-dom@18.3.1)(react-hook-form@7.49.3)(react@18.3.1)(svelte@5.19.3)(vue@3.5.13)(zod@3.23.8)
@@ -7792,6 +7798,39 @@ packages:
   /@tanstack/table-core@8.20.5:
     resolution: {integrity: sha512-P9dF7XbibHph2PFRz8gfBKEXEY/HJPOhym8CHmjF8y3q5mWpKx9xtZapXQUWCgkqvsK0R46Azuz+VaxD4Xl+Tg==}
     engines: {node: '>=12'}
+    dev: false
+
+  /@tegonhq/sdk@0.1.15:
+    resolution: {integrity: sha512-3Sr/ofIZsw+ybBMtAm9qoV25l/m1C1YUqKS+XaVxkWupivFCKA+WOD+xj7TxDqgPBWo1ep7PSAnj8kBq0rvqBg==}
+    engines: {node: '>=18.0.0'}
+    dependencies:
+      axios: 1.7.9(debug@4.4.0)
+      chalk: 5.4.1
+      configstore: 7.0.0
+      cronstrue: 2.53.0
+      debug: 4.4.0(supports-color@5.5.0)
+      evt: 2.5.9
+      slug: 6.1.0
+      terminal-link: 3.0.0
+      uuid: 9.0.1
+      zod: 3.22.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@tegonhq/types@0.1.0(react@18.3.1)(svelte@5.19.3)(vue@3.5.13)(zod@3.23.8):
+    resolution: {integrity: sha512-YrPN8lT1rTvfPgaY2OvocK+UCUssonhljTEeHRYEJGoczdp2NgTarksgGPhJW5bL+FLx/nuzC2lumZOZEAHo1g==}
+    dependencies:
+      ai: 3.4.33(react@18.3.1)(svelte@5.19.3)(vue@3.5.13)(zod@3.23.8)
+      class-validator: 0.14.1
+    transitivePeerDependencies:
+      - openai
+      - react
+      - solid-js
+      - sswr
+      - svelte
+      - vue
+      - zod
     dev: false
 
   /@tegonhq/ui@0.2.29(@tiptap/extension-code-block@2.11.3)(@types/react@18.3.18)(highlight.js@11.11.1)(javascript-time-ago@2.5.11)(lowlight@3.3.0)(react-dom@18.3.1)(react-hook-form@7.49.3)(react@18.3.1)(svelte@5.19.3)(vue@3.5.13)(zod@3.23.8):
